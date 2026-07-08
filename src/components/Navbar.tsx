@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { easeSmooth } from "@/lib/animations";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -55,9 +56,15 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className="group relative font-body text-sm uppercase tracking-[0.12em] text-charcoal transition-colors hover:text-gold"
+                style={{ textShadow: "none" }}
+                onMouseEnter={(e) => { e.currentTarget.style.textShadow = "0 0 12px rgba(201, 169, 110, 0.3)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.textShadow = "none"; }}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
+                <span
+                  className="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-gold transition-all duration-300 group-hover:w-full"
+                  style={{ transformOrigin: "center" }}
+                />
               </Link>
             ))}
           </div>
@@ -98,10 +105,10 @@ export default function Navbar() {
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   exit={{ opacity: 0, y: 10 }}
-                  transition={{ delay: i * 0.05 + 0.1, duration: 0.4 }}
+                  transition={{ delay: i * 0.05 + 0.1, duration: 0.4, ease: easeSmooth }}
                 >
                   <Link
                     href={link.href}

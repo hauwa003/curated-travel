@@ -7,6 +7,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import TextReveal from "@/components/TextReveal";
 import Divider from "@/components/Divider";
+import ImageReveal from "@/components/ImageReveal";
+import SubPageHero from "@/components/SubPageHero";
 import { teamMembers } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -38,23 +40,12 @@ export default function AboutPage() {
     <>
       <Navbar />
       <PageWrapper>
-        {/* Hero */}
-        <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80"
-            alt="Scenic mountain landscape"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-navy/40" />
-          <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
-            <SectionLabel>Our Story</SectionLabel>
-            <h1 className="mt-4 font-display text-5xl font-light text-white md:text-6xl lg:text-7xl">
-              About Vela & Co.
-            </h1>
-          </div>
-        </section>
+        <SubPageHero
+          image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80"
+          alt="Scenic mountain landscape"
+          label="Our Story"
+          title="About Vela & Co."
+        />
 
         {/* Brand Story */}
         <section className="py-24 md:py-32 lg:py-40">
@@ -155,15 +146,12 @@ export default function AboutPage() {
               {teamMembers.map((member, i) => (
                 <ScrollReveal key={member.name} delay={i * 0.15}>
                   <div className="text-center">
-                    <div className="relative mx-auto aspect-[3/4] w-full max-w-xs overflow-hidden">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </div>
+                    <ImageReveal
+                      src={member.image}
+                      alt={member.name}
+                      aspectClass="aspect-[3/4] mx-auto max-w-xs"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                     <h3 className="mt-6 font-display text-2xl font-light text-charcoal">
                       {member.name}
                     </h3>

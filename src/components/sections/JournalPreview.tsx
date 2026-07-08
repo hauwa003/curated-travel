@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -22,26 +25,31 @@ export default function JournalPreview() {
           {posts.map((post, i) => (
             <ScrollReveal key={post.slug} delay={i * 0.15}>
               <Link href={`/journal/${post.slug}`} className="group block">
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="mt-5">
-                  <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
-                    {post.category}
-                  </span>
-                  <h3 className="mt-2 font-display text-2xl font-light text-charcoal transition-colors group-hover:text-gold">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
-                    {post.excerpt}
-                  </p>
-                </div>
+                <motion.div
+                  whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(12, 27, 42, 0.12)" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="mt-5">
+                    <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
+                      {post.category}
+                    </span>
+                    <h3 className="mt-2 font-display text-2xl font-light text-charcoal transition-colors group-hover:text-gold">
+                      {post.title}
+                    </h3>
+                    <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                </motion.div>
               </Link>
             </ScrollReveal>
           ))}

@@ -19,13 +19,13 @@ export default function TextReveal({ text, className = "" }: TextRevealProps) {
       className={className}
     >
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden">
+        <span key={i} className="inline-block" style={{ clipPath: "inset(0 0 0 0)" }}>
           <motion.span
             className="inline-block"
             variants={{
-              hidden: { y: "100%", opacity: 0 },
+              hidden: { clipPath: "inset(0 0 100% 0)", opacity: 0 },
               visible: {
-                y: 0,
+                clipPath: "inset(0 0 0% 0)",
                 opacity: 1,
                 transition: {
                   duration: 0.5,

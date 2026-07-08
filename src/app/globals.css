@@ -14,6 +14,11 @@
 
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --shadow-elevation-1: 0 2px 8px rgba(12, 27, 42, 0.08);
+  --shadow-elevation-2: 0 4px 16px rgba(12, 27, 42, 0.1);
+  --shadow-elevation-3: 0 8px 30px rgba(12, 27, 42, 0.12);
+  --shadow-elevation-4: 0 16px 50px rgba(12, 27, 42, 0.16);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -37,6 +42,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Film grain overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
 ::selection {
   background-color: var(--color-gold);
   color: var(--color-navy);
@@ -45,4 +63,25 @@ body {
 /* Luxury form inputs */
 input:focus, textarea:focus, select:focus {
   outline: none;
+}
+
+/* Premium input underline expansion */
+.input-underline {
+  position: relative;
+}
+
+.input-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: width 0.4s var(--ease-expo), left 0.4s var(--ease-expo);
+}
+
+.input-underline:focus-within::after {
+  width: 100%;
+  left: 0;
 }

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import Button from "@/components/Button";
-import Divider from "@/components/Divider";
+import ImageReveal from "@/components/ImageReveal";
+import SubPageHero from "@/components/SubPageHero";
+import TimelineProgress from "./TimelineProgress";
 import { featuredJourney } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -22,36 +23,26 @@ export default function FeaturedJourneyPage() {
       <Navbar />
       <PageWrapper>
         {/* Hero */}
-        <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
-          <Image
-            src={journey.heroImage}
-            alt={journey.title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/30 to-navy/10" />
-          <div className="relative flex h-full flex-col items-start justify-end px-6 pb-16 lg:px-12">
-            <div className="mx-auto w-full max-w-7xl">
-              <SectionLabel>Featured Journey</SectionLabel>
-              <h1 className="mt-4 font-display text-5xl font-light text-white md:text-6xl lg:text-7xl">
-                {journey.title}
-              </h1>
-              <p className="mt-3 max-w-2xl font-display text-xl font-light text-white/80 md:text-2xl">
-                {journey.subtitle}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-6">
-                <span className="font-body text-sm uppercase tracking-[0.15em] text-gold">
-                  {journey.duration}
-                </span>
-                <span className="font-body text-sm text-white/50">|</span>
-                <span className="font-body text-sm uppercase tracking-[0.15em] text-gold">
-                  {journey.startingPrice}
-                </span>
-              </div>
-            </div>
+        <SubPageHero
+          image={journey.heroImage}
+          alt={journey.title}
+          label="Featured Journey"
+          title={journey.title}
+          height="h-[70vh] min-h-[500px]"
+        >
+          <p className="mt-3 max-w-2xl font-display text-xl font-light text-white/80 md:text-2xl">
+            {journey.subtitle}
+          </p>
+          <div className="mt-6 flex flex-wrap gap-6">
+            <span className="font-body text-sm uppercase tracking-[0.15em] text-gold">
+              {journey.duration}
+            </span>
+            <span className="font-body text-sm text-white/50">|</span>
+            <span className="font-body text-sm uppercase tracking-[0.15em] text-gold">
+              {journey.startingPrice}
+            </span>
           </div>
-        </section>
+        </SubPageHero>
 
         {/* Description + Highlights */}
         <section className="py-24 md:py-32 lg:py-40">
@@ -101,38 +92,7 @@ export default function FeaturedJourneyPage() {
               </h2>
             </ScrollReveal>
 
-            <div className="mt-16 space-y-0">
-              {journey.itinerary.map((day, i) => (
-                <ScrollReveal key={day.day} delay={i * 0.05}>
-                  <div className="flex gap-6 border-l border-gold/20 py-8 pl-8 md:gap-10">
-                    <div className="shrink-0">
-                      <span className="font-display text-3xl font-light text-gold/40">
-                        {String(day.day).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-xl font-light text-charcoal">
-                        {day.title}
-                      </h3>
-                      <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
-                        {day.description}
-                      </p>
-                    </div>
-                    {day.image && (
-                      <div className="relative hidden aspect-[4/3] w-40 shrink-0 overflow-hidden md:block">
-                        <Image
-                          src={day.image}
-                          alt={day.title}
-                          fill
-                          className="object-cover"
-                          sizes="160px"
-                        />
-                      </div>
-                    )}
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+            <TimelineProgress itinerary={journey.itinerary} />
           </div>
         </section>
 
@@ -149,15 +109,12 @@ export default function FeaturedJourneyPage() {
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {journey.gallery.map((img, i) => (
                 <ScrollReveal key={i} delay={i * 0.1}>
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={img}
-                      alt={`${journey.title} gallery ${i + 1}`}
-                      fill
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
+                  <ImageReveal
+                    src={img}
+                    alt={`${journey.title} gallery ${i + 1}`}
+                    aspectClass="aspect-[4/3]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </ScrollReveal>
               ))}
             </div>
