@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
@@ -7,6 +6,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import Button from "@/components/Button";
 import Divider from "@/components/Divider";
+import ImageReveal from "@/components/ImageReveal";
+import SubPageHero from "@/components/SubPageHero";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -42,23 +43,12 @@ export default function ServicesPage() {
     <>
       <Navbar />
       <PageWrapper>
-        {/* Hero */}
-        <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80"
-            alt="Travel planning"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-navy/40" />
-          <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
-            <SectionLabel>What We Do</SectionLabel>
-            <h1 className="mt-4 font-display text-5xl font-light text-white md:text-6xl lg:text-7xl">
-              Our Services
-            </h1>
-          </div>
-        </section>
+        <SubPageHero
+          image="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80"
+          alt="Travel planning"
+          label="What We Do"
+          title="Our Services"
+        />
 
         {/* Services */}
         <section className="py-24 md:py-32 lg:py-40">
@@ -70,12 +60,11 @@ export default function ServicesPage() {
                     i > 0 ? "mt-24 md:mt-32" : ""
                   } ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden lg:w-1/2">
-                    <Image
+                  <div className="lg:w-1/2">
+                    <ImageReveal
                       src={service.image}
                       alt={service.title}
-                      fill
-                      className="object-cover"
+                      aspectClass="aspect-[4/3] w-full"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>

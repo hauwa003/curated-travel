@@ -43,3 +43,40 @@ export const slideIn = (direction: "left" | "right" = "left") => ({
     transition: { duration: 0.8, ease: easeSmooth },
   },
 });
+
+// --- Premium additions ---
+
+export const maskReveal = {
+  hidden: { clipPath: "inset(100% 0 0 0)", opacity: 0 },
+  visible: {
+    clipPath: "inset(0% 0 0 0)",
+    opacity: 1,
+    transition: { duration: 1, ease: easeExpo },
+  },
+};
+
+export const blurIn = {
+  hidden: { opacity: 0, filter: "blur(12px)" },
+  visible: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: { duration: 1, ease: easeSmooth },
+  },
+};
+
+export const lineDraw = {
+  hidden: { scaleX: 0, opacity: 0 },
+  visible: {
+    scaleX: 1,
+    opacity: 1,
+    transition: { duration: 0.8, ease: easeExpo },
+  },
+};
+
+export const staggerCascade = {
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};

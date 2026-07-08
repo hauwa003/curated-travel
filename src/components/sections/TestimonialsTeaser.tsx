@@ -1,19 +1,38 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import { testimonials } from "@/lib/data";
 
+const INTERVAL = 6000;
+
 export default function TestimonialsTeaser() {
   const [current, setCurrent] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  const advance = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+    setProgress(0);
+  }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    const timer = setInterval(advance, INTERVAL);
     return () => clearInterval(timer);
-  }, []);
+  }, [advance]);
+
+  // Progress animation — updates every 50ms
+  useEffect(() => {
+    setProgress(0);
+    const step = 50;
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        const next = prev + step / INTERVAL;
+        return next >= 1 ? 1 : next;
+      });
+    }, step);
+    return () => clearInterval(interval);
+  }, [current]);
 
   const t = testimonials[current];
 
@@ -21,16 +40,23 @@ export default function TestimonialsTeaser() {
     <section className="bg-navy py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <ScrollReveal>
-          <div className="font-display text-6xl text-gold/30">&ldquo;</div>
+          <motion.div
+            key={`quote-${current}`}
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            className="font-display text-6xl text-gold/30"
+          >
+            &ldquo;
+          </motion.div>
         </ScrollReveal>
 
         <div className="relative min-h-[200px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, filter: "blur(8px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              exit={{ opacity: 0, filter: "blur(8px)" }}
               transition={{ duration: 0.6 }}
             >
               <blockquote className="font-display text-xl font-light leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
@@ -48,17 +74,26 @@ export default function TestimonialsTeaser() {
           </AnimatePresence>
         </div>
 
-        {/* Dots */}
+        {/* Progress Dots */}
         <div className="mt-10 flex justify-center gap-2">
           {testimonials.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-8 bg-gold" : "w-1.5 bg-white/20"
-              }`}
+              onClick={() => { setCurrent(i); setProgress(0); }}
+              className="relative h-1.5 overflow-hidden rounded-full transition-all duration-300"
+              style={{ width: i === current ? 32 : 6, backgroundColor: i === current ? "transparent" : "rgba(255,255,255,0.2)" }}
               aria-label={`Go to testimonial ${i + 1}`}
-            />
+            >
+              {i === current && (
+                <>
+                  <div className="absolute inset-0 rounded-full bg-gold/30" />
+                  <motion.div
+                    className="absolute inset-0 origin-left rounded-full bg-gold"
+                    style={{ scaleX: progress }}
+                  />
+                </>
+              )}
+            </button>
           ))}
         </div>
       </div>

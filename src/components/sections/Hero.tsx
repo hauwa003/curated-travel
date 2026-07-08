@@ -3,38 +3,64 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "@/components/Button";
-import { easeExpo } from "@/lib/animations";
+import { easeExpo, easeSmooth } from "@/lib/animations";
+
+const taglineChars = "Journeys, Crafted".split("");
 
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80"
-        alt="Luxury coastal destination"
-        fill
-        className="object-cover"
-        priority
-      />
+      {/* Background Image — Ken Burns slow zoom */}
+      <motion.div
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.08 }}
+        transition={{ duration: 20, ease: "linear" }}
+        className="absolute inset-0"
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80"
+          alt="Luxury coastal destination"
+          fill
+          className="object-cover"
+          priority
+        />
+      </motion.div>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/20 to-navy/60" />
+      {/* Gradient Overlay — fade in */}
+      <motion.div
+        initial={{ opacity: 0.7 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, ease: easeSmooth }}
+        className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/20 to-navy/60"
+      />
 
       {/* Content */}
       <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
+        {/* Tagline — character-level reveal */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: easeExpo }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">
-            Journeys, Crafted
+            {taglineChars.map((char, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + i * 0.03, ease: easeSmooth }}
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
           </span>
         </motion.div>
 
+        {/* Headline — blur-to-focus */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.2, delay: 0.5, ease: easeExpo }}
           className="mt-6 max-w-4xl font-display text-5xl font-light leading-[1.1] text-white md:text-7xl lg:text-8xl"
         >
@@ -44,8 +70,8 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.8, ease: easeExpo }}
           className="mt-6 max-w-lg font-body text-base leading-relaxed text-white/80 md:text-lg"
         >

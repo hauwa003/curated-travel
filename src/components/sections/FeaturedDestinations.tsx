@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -26,28 +29,37 @@ export default function FeaturedDestinations() {
               delay={i * 0.1}
               className={i === 0 ? "md:col-span-2 lg:col-span-2 lg:row-span-2" : ""}
             >
-              <Link href={`/destinations#${dest.slug}`} className="group relative block overflow-hidden">
-                <div className={`relative ${i === 0 ? "aspect-[4/3] lg:aspect-auto lg:h-full" : "aspect-[3/4]"}`}>
-                  <Image
-                    src={dest.image}
-                    alt={dest.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes={i === 0 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <span className="font-body text-xs uppercase tracking-[0.2em] text-gold">
-                      {dest.region}
-                    </span>
-                    <h3 className={`mt-2 font-display font-light text-white ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
-                      {dest.name}
-                    </h3>
-                    <p className="mt-2 max-w-md font-body text-sm text-white/70">
-                      {dest.tagline}
-                    </p>
+              <Link href={`/destinations#${dest.slug}`} className="group relative block">
+                <motion.div
+                  whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(12, 27, 42, 0.16)" }}
+                  transition={{ duration: 0.3 }}
+                  className="relative overflow-hidden"
+                >
+                  <div className={`relative ${i === 0 ? "aspect-[4/3] lg:aspect-auto lg:h-full min-h-[400px]" : "aspect-[3/4]"}`}>
+                    <Image
+                      src={dest.image}
+                      alt={dest.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      sizes={i === 0 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500 group-hover:-translate-y-2 md:p-8">
+                      <span className="font-body text-xs uppercase tracking-[0.2em] text-gold">
+                        {dest.region}
+                      </span>
+                      <h3 className={`mt-2 font-display font-light text-white ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+                        {dest.name}
+                      </h3>
+                      <p className="mt-2 max-w-md font-body text-sm text-white/70">
+                        {dest.tagline}
+                      </p>
+                      <span className="mt-3 inline-block font-body text-xs uppercase tracking-[0.15em] text-gold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Explore &rarr;
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </Link>
             </ScrollReveal>
           ))}

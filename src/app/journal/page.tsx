@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
+import ImageReveal from "@/components/ImageReveal";
+import SubPageHero from "@/components/SubPageHero";
 import { journalPosts } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -20,23 +22,13 @@ export default function JournalPage() {
     <>
       <Navbar />
       <PageWrapper>
-        {/* Hero */}
-        <section className="relative h-[50vh] min-h-[350px] w-full overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1920&q=80"
-            alt="Journal"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-navy/40" />
-          <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
-            <SectionLabel>Stories & Insights</SectionLabel>
-            <h1 className="mt-4 font-display text-5xl font-light text-white md:text-6xl lg:text-7xl">
-              The Journal
-            </h1>
-          </div>
-        </section>
+        <SubPageHero
+          image="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1920&q=80"
+          alt="Journal"
+          label="Stories & Insights"
+          title="The Journal"
+          height="h-[50vh] min-h-[350px]"
+        />
 
         {/* Featured Post */}
         <section className="py-24 md:py-32 lg:py-40">
@@ -44,15 +36,12 @@ export default function JournalPage() {
             <ScrollReveal>
               <Link href={`/journal/${featured.slug}`} className="group block">
                 <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={featured.image}
-                      alt={featured.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
+                  <ImageReveal
+                    src={featured.image}
+                    alt={featured.title}
+                    aspectClass="aspect-[4/3]"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                   <div>
                     <div className="flex items-center gap-4">
                       <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
@@ -91,15 +80,12 @@ export default function JournalPage() {
                   {rest.map((post, i) => (
                     <ScrollReveal key={post.slug} delay={i * 0.1}>
                       <Link href={`/journal/${post.slug}`} className="group block">
-                        <div className="relative aspect-[4/5] overflow-hidden">
-                          <Image
-                            src={post.image}
-                            alt={post.title}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          />
-                        </div>
+                        <ImageReveal
+                          src={post.image}
+                          alt={post.title}
+                          aspectClass="aspect-[4/5]"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
                         <div className="mt-5">
                           <div className="flex items-center gap-4">
                             <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
