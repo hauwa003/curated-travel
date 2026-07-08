@@ -1,0 +1,131 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import PageWrapper from "@/components/PageWrapper";
+import ScrollReveal from "@/components/ScrollReveal";
+import SectionLabel from "@/components/SectionLabel";
+import { journalPosts } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "Journal",
+  description: "Stories, insights, and inspiration from the world of luxury travel — by the advisors at Vela & Co.",
+};
+
+export default function JournalPage() {
+  const [featured, ...rest] = journalPosts;
+
+  return (
+    <>
+      <Navbar />
+      <PageWrapper>
+        {/* Hero */}
+        <section className="relative h-[50vh] min-h-[350px] w-full overflow-hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1920&q=80"
+            alt="Journal"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-navy/40" />
+          <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
+            <SectionLabel>Stories & Insights</SectionLabel>
+            <h1 className="mt-4 font-display text-5xl font-light text-white md:text-6xl lg:text-7xl">
+              The Journal
+            </h1>
+          </div>
+        </section>
+
+        {/* Featured Post */}
+        <section className="py-24 md:py-32 lg:py-40">
+          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <ScrollReveal>
+              <Link href={`/journal/${featured.slug}`} className="group block">
+                <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={featured.image}
+                      alt={featured.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
+                        {featured.category}
+                      </span>
+                      <span className="font-body text-xs text-charcoal/40">
+                        {featured.readTime}
+                      </span>
+                    </div>
+                    <h2 className="mt-4 font-display text-3xl font-light text-charcoal transition-colors group-hover:text-gold md:text-4xl">
+                      {featured.title}
+                    </h2>
+                    <p className="mt-4 font-body text-base leading-relaxed text-charcoal/60">
+                      {featured.excerpt}
+                    </p>
+                    <p className="mt-6 font-body text-sm text-charcoal/40">
+                      By {featured.author} &middot;{" "}
+                      {new Date(featured.date).toLocaleDateString("en-GB", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            {/* Post Grid */}
+            {rest.length > 0 && (
+              <div className="mt-24">
+                <ScrollReveal>
+                  <SectionLabel>More Stories</SectionLabel>
+                </ScrollReveal>
+                <div className="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                  {rest.map((post, i) => (
+                    <ScrollReveal key={post.slug} delay={i * 0.1}>
+                      <Link href={`/journal/${post.slug}`} className="group block">
+                        <div className="relative aspect-[4/5] overflow-hidden">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        </div>
+                        <div className="mt-5">
+                          <div className="flex items-center gap-4">
+                            <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
+                              {post.category}
+                            </span>
+                            <span className="font-body text-xs text-charcoal/40">
+                              {post.readTime}
+                            </span>
+                          </div>
+                          <h3 className="mt-2 font-display text-2xl font-light text-charcoal transition-colors group-hover:text-gold">
+                            {post.title}
+                          </h3>
+                          <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
+                            {post.excerpt}
+                          </p>
+                        </div>
+                      </Link>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      </PageWrapper>
+      <Footer />
+    </>
+  );
+}
