@@ -81,8 +81,50 @@ export default async function DestinationDetailPage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Trip Overview */}
+        <section className="bg-surface py-16 md:py-24">
+          <div className="mx-auto max-w-4xl px-6">
+            <div className="grid gap-12 md:grid-cols-2 md:items-start">
+              {/* Left: Duration & Price */}
+              <ScrollReveal>
+                <div>
+                  <SectionLabel>Trip Details</SectionLabel>
+                  <div className="mt-8 space-y-6">
+                    <div>
+                      <span className="font-sans text-sm uppercase tracking-[0.15em] text-muted">Duration</span>
+                      <p className="mt-1 font-heading text-2xl font-medium text-text">{dest.duration}</p>
+                    </div>
+                    <div>
+                      <span className="font-sans text-sm uppercase tracking-[0.15em] text-muted">Starting Price</span>
+                      <p className="mt-1 font-heading text-2xl font-medium text-text">{dest.startingPrice}</p>
+                    </div>
+                  </div>
+                  <div className="mt-10">
+                    <Button href="/contact">Book Your Trip</Button>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Right: What's Included */}
+              <ScrollReveal delay={0.1}>
+                <div>
+                  <SectionLabel>What&apos;s Included</SectionLabel>
+                  <ul className="mt-8 space-y-4">
+                    {dest.includes.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-text/30" />
+                        <span className="font-sans text-base leading-relaxed text-text/80">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Destination Image — full bleed */}
-        <section className="pb-16 md:pb-24">
+        <section className="py-16 md:py-24">
           <div className="mx-auto max-w-5xl px-6">
             <ScrollReveal>
               <div className="relative aspect-[16/9] overflow-hidden">
@@ -94,25 +136,6 @@ export default async function DestinationDetailPage({ params }: PageProps) {
                   sizes="(max-width: 1024px) 100vw, 80vw"
                 />
               </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* What Awaits Section */}
-        <section className="bg-surface py-16 md:py-24">
-          <div className="mx-auto max-w-3xl px-6 text-center">
-            <ScrollReveal>
-              <SectionLabel align="center">Your Journey</SectionLabel>
-              <h2 className="mt-4 font-heading text-3xl font-medium text-text md:text-4xl">
-                What Awaits in {dest.name}
-              </h2>
-              <p className="mt-6 font-sans text-base leading-[1.8] text-text/70">
-                Every journey we craft is as unique as the traveller who takes
-                it. Our advisors have walked these streets, dined at these
-                tables, and discovered the hidden corners that make{" "}
-                {dest.name} extraordinary. Let us design an itinerary that
-                reveals this destination on your terms.
-              </p>
             </ScrollReveal>
           </div>
         </section>
@@ -192,7 +215,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
                 itinerary that exceeds your expectations.
               </p>
               <div className="mt-10">
-                <Button href="/contact">Start Planning</Button>
+                <Button href="/contact">Book Your Trip</Button>
               </div>
             </ScrollReveal>
           </div>

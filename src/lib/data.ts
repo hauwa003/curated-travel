@@ -9,6 +9,9 @@ export const destinations: Destination[] = [
     description: "Whitewashed villages perched on volcanic cliffs, sunsets that paint the caldera in gold and amber, and a quietude that only the most discerning travellers will find.",
     image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1200&q=80",
     featured: true,
+    duration: "7 Nights",
+    startingPrice: "From £4,200 per person",
+    includes: ["Boutique cave hotel with caldera views", "Private sunset catamaran cruise", "Wine tasting at Santo Wines", "Guided tour of Oia and Fira", "Daily breakfast & 3 curated dinners", "Private airport transfers"],
   },
   {
     slug: "kyoto",
@@ -18,6 +21,9 @@ export const destinations: Destination[] = [
     description: "Ancient temples shrouded in morning mist, private tea ceremonies in hidden gardens, and the gentle rustle of bamboo groves — Kyoto reveals itself slowly to those who linger.",
     image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
     featured: true,
+    duration: "10 Nights",
+    startingPrice: "From £6,800 per person",
+    includes: ["Traditional ryokan with private onsen", "Private tea ceremony with a tea master", "Guided bamboo grove & temple walk", "Day trip to Nara with private guide", "Kaiseki dining experiences", "Shinkansen rail passes included"],
   },
   {
     slug: "amalfi-coast",
@@ -27,6 +33,9 @@ export const destinations: Destination[] = [
     description: "Terraced lemon groves cascading to cerulean waters, intimate trattorias where the pasta is made by hand, and coastal roads that wind through some of Italy's most breathtaking scenery.",
     image: "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1200&q=80",
     featured: true,
+    duration: "8 Nights",
+    startingPrice: "From £5,500 per person",
+    includes: ["Cliffside suite in Ravello or Positano", "Private boat tour to Capri", "Cooking class with a local chef", "Limoncello tasting in Amalfi", "Chauffeured coastal transfers", "Daily breakfast & 4 curated dinners"],
   },
   {
     slug: "patagonia",
@@ -36,6 +45,9 @@ export const destinations: Destination[] = [
     description: "Jagged granite spires rising from pristine wilderness, glacial lakes of impossible blue, and a silence so complete it becomes its own kind of luxury.",
     image: "https://images.unsplash.com/photo-1531761535209-180857e963b9?w=1200&q=80",
     featured: true,
+    duration: "12 Nights",
+    startingPrice: "From £8,900 per person",
+    includes: ["Luxury lodge at Torres del Paine", "Guided glacier trekking expedition", "Private estancia stay with gaucho experience", "Perito Moreno glacier boat tour", "All meals & premium wines", "Domestic flights & all transfers"],
   },
   {
     slug: "maldives",
@@ -45,6 +57,9 @@ export const destinations: Destination[] = [
     description: "Overwater villas suspended above crystalline lagoons, private sandbanks accessible only by seaplane, and marine life so abundant the reef becomes your living room.",
     image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=80",
     featured: true,
+    duration: "7 Nights",
+    startingPrice: "From £7,200 per person",
+    includes: ["Overwater villa with private pool", "Seaplane transfers from Malé", "Sunset dolphin cruise", "Private snorkelling & diving excursions", "Full-board dining at resort restaurants", "Couples spa treatment"],
   },
   {
     slug: "marrakech",
@@ -54,6 +69,9 @@ export const destinations: Destination[] = [
     description: "Behind unassuming doors lie palatial riads with mosaic courtyards, rooftop terraces overlooking the Atlas Mountains, and souks that tell stories in saffron and silk.",
     image: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&q=80",
     featured: true,
+    duration: "5 Nights",
+    startingPrice: "From £3,400 per person",
+    includes: ["Palatial riad in the Medina", "Private souk tour with local guide", "Atlas Mountains day excursion", "Traditional hammam & spa experience", "Rooftop cooking class", "Daily breakfast & 2 curated dinners"],
   },
   {
     slug: "new-zealand",
@@ -62,6 +80,9 @@ export const destinations: Destination[] = [
     tagline: "Nature's Masterwork",
     description: "From fjords carved by glaciers to geothermal wonderlands, New Zealand offers an unparalleled canvas of natural beauty paired with world-class lodges and vineyard estates.",
     image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80",
+    duration: "14 Nights",
+    startingPrice: "From £9,500 per person",
+    includes: ["Luxury lodges across both islands", "Milford Sound private cruise", "Helicopter glacier landing", "Vineyard tour in Marlborough", "All domestic flights & transfers", "Daily breakfast & 5 curated dinners"],
   },
   {
     slug: "costa-rica",
@@ -70,6 +91,9 @@ export const destinations: Destination[] = [
     tagline: "Pura Vida in Luxury",
     description: "Cloud forests alive with toucans and orchids, volcanic hot springs nestled in the jungle, and eco-lodges where sustainability meets five-star comfort.",
     image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1200&q=80",
+    duration: "9 Nights",
+    startingPrice: "From £5,100 per person",
+    includes: ["Eco-luxury treehouse lodge", "Guided cloud forest night walk", "Arenal volcano hot springs", "White-water rafting adventure", "Wildlife safari in Tortuguero", "All transfers & domestic flights"],
   },
   {
     slug: "iceland",
@@ -78,6 +102,9 @@ export const destinations: Destination[] = [
     tagline: "Fire, Ice & Wonder",
     description: "Where glaciers meet volcanic landscapes, the Northern Lights dance above geothermal pools, and every winding road reveals a waterfall more dramatic than the last.",
     image: "https://images.unsplash.com/photo-1504829857797-ddff29c27927?w=1200&q=80",
+    duration: "8 Nights",
+    startingPrice: "From £5,800 per person",
+    includes: ["Boutique design hotel in Reykjavík", "Private Golden Circle tour", "Glacier hiking on Sólheimajökull", "Northern Lights hunting excursion", "Blue Lagoon premium access", "South Coast waterfalls & black sand beaches"],
   },
 ];
 
