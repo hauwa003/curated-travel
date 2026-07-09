@@ -75,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.8, ease: easeExpo }}
-          className="mt-6 max-w-lg font-sans text-base leading-relaxed text-white/80 md:text-lg"
+          className="mt-6 max-w-xl font-sans text-base leading-relaxed text-white/80 md:text-lg"
         >
           Bespoke journeys to the world&apos;s most extraordinary destinations,
           crafted by advisors who have been there before you.
