@@ -56,7 +56,7 @@ export default function AboutPage() {
             <div className="mt-10">
               <TextReveal
                 text="Vela & Co. was born from a simple conviction: that the most meaningful journeys are those crafted with care, knowledge, and an unwavering commitment to excellence."
-                className="font-sans text-2xl font-medium leading-relaxed text-text md:text-3xl"
+                className="font-heading text-2xl font-medium leading-relaxed text-text md:text-3xl"
               />
             </div>
             <ScrollReveal delay={0.3}>
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">Our Philosophy</SectionLabel>
-              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+              <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
                 What Guides Us
               </h2>
             </ScrollReveal>
@@ -90,7 +90,7 @@ export default function AboutPage() {
               {pillars.map((pillar, i) => (
                 <ScrollReveal key={pillar.title} delay={i * 0.1}>
                   <div className="border-l border-text/20 pl-6">
-                    <h3 className="font-sans text-2xl font-medium text-text">
+                    <h3 className="font-heading text-2xl font-medium text-text">
                       {pillar.title}
                     </h3>
                     <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
@@ -108,7 +108,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl px-6 text-center">
             <ScrollReveal>
               <SectionLabel align="center">Credentials</SectionLabel>
-              <h2 className="mt-4 font-sans text-4xl font-medium text-white md:text-5xl">
+              <h2 className="mt-4 font-heading text-4xl font-medium text-white md:text-5xl">
                 Trusted Worldwide
               </h2>
               <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/60">
@@ -137,7 +137,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">The Team</SectionLabel>
-              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+              <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
                 Your Advisors
               </h2>
             </ScrollReveal>
@@ -152,7 +152,7 @@ export default function AboutPage() {
                       aspectClass="aspect-[3/4] mx-auto max-w-xs"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <h3 className="mt-6 font-sans text-2xl font-medium text-text">
+                    <h3 className="mt-6 font-heading text-2xl font-medium text-text">
                       {member.name}
                     </h3>
                     <p className="mt-1 font-sans text-xs uppercase tracking-[0.15em] text-muted">

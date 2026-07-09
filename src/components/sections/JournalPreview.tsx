@@ -16,7 +16,7 @@ export default function JournalPreview() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <ScrollReveal>
           <SectionLabel align="center">Journal</SectionLabel>
-          <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+          <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
             Stories & Insights
           </h2>
         </ScrollReveal>
@@ -42,7 +42,7 @@ export default function JournalPreview() {
                     <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                       {post.category}
                     </span>
-                    <h3 className="mt-2 font-sans text-2xl font-medium text-text transition-colors group-hover:text-muted">
+                    <h3 className="mt-2 font-heading text-2xl font-medium text-text transition-colors group-hover:text-muted">
                       {post.title}
                     </h3>
                     <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">

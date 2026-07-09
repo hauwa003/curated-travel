@@ -44,7 +44,7 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
           <Link href="/" className="relative z-10">
-            <span className="font-sans text-2xl font-medium tracking-wide text-text">
+            <span className="font-heading text-2xl font-medium tracking-wide text-text">
               Vela <span className="text-muted">&</span> Co.
             </span>
           </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-sans text-3xl font-medium text-text transition-colors hover:text-muted"
+                    className="font-heading text-3xl font-medium text-text transition-colors hover:text-muted"
                   >
                     {link.label}
                   </Link>

@@ -37,10 +37,10 @@ export default function ReviewsPage() {
                   }`}
                 >
                   <div className={`${i % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
-                    <div className="font-sans text-5xl text-muted/30">
+                    <div className="font-heading text-5xl text-muted/30">
                       &ldquo;
                     </div>
-                    <blockquote className="mt-2 font-sans text-xl font-medium leading-relaxed text-text md:text-2xl">
+                    <blockquote className="mt-2 font-heading text-xl font-medium leading-relaxed text-text md:text-2xl">
                       {testimonial.quote}
                     </blockquote>
                     <div className="mt-6">
@@ -71,7 +71,7 @@ export default function ReviewsPage() {
         <section className="bg-dark py-24 md:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <ScrollReveal>
-              <h2 className="font-sans text-3xl font-medium text-white md:text-4xl">
+              <h2 className="font-heading text-3xl font-medium text-white md:text-4xl">
                 Ready to Write Your Own Story?
               </h2>
               <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/60">

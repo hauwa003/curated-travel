@@ -51,7 +51,7 @@ export default function JournalPage() {
                         {featured.readTime}
                       </span>
                     </div>
-                    <h2 className="mt-4 font-sans text-3xl font-medium text-text transition-colors group-hover:text-muted md:text-4xl">
+                    <h2 className="mt-4 font-heading text-3xl font-medium text-text transition-colors group-hover:text-muted md:text-4xl">
                       {featured.title}
                     </h2>
                     <p className="mt-4 font-sans text-base leading-relaxed text-text/60">
@@ -95,7 +95,7 @@ export default function JournalPage() {
                               {post.readTime}
                             </span>
                           </div>
-                          <h3 className="mt-2 font-sans text-2xl font-medium text-text transition-colors group-hover:text-muted">
+                          <h3 className="mt-2 font-heading text-2xl font-medium text-text transition-colors group-hover:text-muted">
                             {post.title}
                           </h3>
                           <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">

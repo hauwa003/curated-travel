@@ -70,7 +70,7 @@ export default function ServicesPage() {
                   </div>
                   <div className="lg:w-1/2">
                     <SectionLabel>{`Service 0${i + 1}`}</SectionLabel>
-                    <h2 className="mt-4 font-sans text-3xl font-medium text-text md:text-4xl">
+                    <h2 className="mt-4 font-heading text-3xl font-medium text-text md:text-4xl">
                       {service.title}
                     </h2>
                     <p className="mt-4 font-sans text-base leading-relaxed text-text/70">
@@ -102,7 +102,7 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">The Process</SectionLabel>
-              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+              <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
                 How It Works
               </h2>
             </ScrollReveal>
@@ -111,7 +111,7 @@ export default function ServicesPage() {
               {processSteps.map((step, i) => (
                 <ScrollReveal key={step.number} delay={i * 0.1}>
                   <div>
-                    <span className="font-sans text-4xl font-medium text-muted/40">
+                    <span className="font-heading text-4xl font-medium text-muted/40">
                       {step.number}
                     </span>
                     <h3 className="mt-4 font-sans text-xl font-medium text-text">

@@ -57,7 +57,7 @@ export default function SubPageHero({
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.4, ease: easeSmooth }}
-          className="mt-4 font-sans text-5xl font-medium text-white md:text-6xl lg:text-7xl"
+          className="mt-4 font-heading text-5xl font-medium text-white md:text-6xl lg:text-7xl"
         >
           {title}
         </motion.h1>
