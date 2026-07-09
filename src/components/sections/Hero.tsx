@@ -90,27 +90,12 @@ export default function Hero() {
           <Button href="/destinations" variant="primary">
             Explore Destinations
           </Button>
-          <Button href="/contact" variant="secondary" className="border-white/60 text-white hover:bg-white hover:text-dark">
+          <Button href="/contact" variant="secondary" className="border-white/60 text-white hover:border-white hover:bg-white hover:text-text">
             Begin Your Journey
           </Button>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="h-10 w-6 rounded-full border border-white/50 p-1"
-        >
-          <div className="mx-auto h-2 w-0.5 rounded-full bg-white/80" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
