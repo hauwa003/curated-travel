@@ -23,10 +23,10 @@ export default function DestinationsGrid() {
           <button
             key={region}
             onClick={() => setActiveRegion(region)}
-            className={`px-5 py-2 font-body text-xs uppercase tracking-[0.15em] transition-all duration-300 ${
+            className={`px-5 py-2 font-sans text-xs uppercase tracking-[0.15em] transition-all duration-300 ${
               activeRegion === region
-                ? "bg-gold text-navy"
-                : "border border-charcoal/20 text-charcoal/60 hover:border-gold hover:text-gold"
+                ? "bg-text text-white"
+                : "border border-text/20 text-text/60 hover:border-text hover:text-muted"
             }`}
           >
             {region}
@@ -60,21 +60,21 @@ export default function DestinationsGrid() {
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500 group-hover:-translate-y-2">
-                  <span className="font-body text-xs uppercase tracking-[0.2em] text-gold">
+                  <span className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
                     {dest.region}
                   </span>
-                  <h3 className="mt-2 font-display text-2xl font-light text-white">
+                  <h3 className="mt-2 font-sans text-2xl font-medium text-white">
                     {dest.name}
                   </h3>
-                  <p className="mt-1 font-body text-sm text-white/60">
+                  <p className="mt-1 font-sans text-sm text-white/60">
                     {dest.tagline}
                   </p>
-                  <p className="mt-3 max-h-0 overflow-hidden font-body text-sm leading-relaxed text-white/50 transition-all duration-500 group-hover:max-h-40">
+                  <p className="mt-3 max-h-0 overflow-hidden font-sans text-sm leading-relaxed text-white/50 transition-all duration-500 group-hover:max-h-40">
                     {dest.description}
                   </p>
-                  <span className="mt-2 inline-block font-body text-xs uppercase tracking-[0.15em] text-gold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="mt-2 inline-block font-sans text-xs uppercase tracking-[0.15em] text-muted opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     Explore &rarr;
                   </span>
                 </div>

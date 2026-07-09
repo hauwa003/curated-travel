@@ -1,24 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #0C1B2A;
-  --color-charcoal: #1A1F26;
-  --color-gold: #C9A96E;
-  --color-champagne: #D4C5A0;
-  --color-cream: #FAF7F2;
-  --color-ivory: #F5F1EA;
+  --color-dark: #0C0A09;
+  --color-text: #1C1917;
+  --color-muted: #78716C;
+  --color-subtle: #A8A29E;
+  --color-surface: #FAFAF9;
+  --color-bg: #FFFFFF;
   --color-white: #FFFFFF;
 
-  --font-display: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
 
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --shadow-elevation-1: 0 2px 8px rgba(12, 27, 42, 0.08);
-  --shadow-elevation-2: 0 4px 16px rgba(12, 27, 42, 0.1);
-  --shadow-elevation-3: 0 8px 30px rgba(12, 27, 42, 0.12);
-  --shadow-elevation-4: 0 16px 50px rgba(12, 27, 42, 0.16);
+  --shadow-elevation-1: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-elevation-2: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-3: 0 8px 30px rgba(0, 0, 0, 0.10);
+  --shadow-elevation-4: 0 16px 50px rgba(0, 0, 0, 0.14);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -35,9 +34,9 @@ html {
 }
 
 body {
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
-  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -56,8 +55,8 @@ body::after {
 }
 
 ::selection {
-  background-color: var(--color-gold);
-  color: var(--color-navy);
+  background-color: var(--color-text);
+  color: var(--color-white);
 }
 
 /* Luxury form inputs */
@@ -77,7 +76,7 @@ input:focus, textarea:focus, select:focus {
   left: 50%;
   width: 0;
   height: 1px;
-  background-color: var(--color-gold);
+  background-color: var(--color-text);
   transition: width 0.4s var(--ease-expo), left 0.4s var(--ease-expo);
 }
 

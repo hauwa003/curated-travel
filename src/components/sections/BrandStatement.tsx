@@ -12,11 +12,11 @@ export default function BrandStatement() {
         <div className="mt-10">
           <TextReveal
             text="We believe that extraordinary travel is not about the places you visit, but the way they make you feel — the quiet moments of wonder, the connections forged, the stories you carry home."
-            className="font-display text-2xl font-light leading-relaxed text-charcoal md:text-3xl lg:text-4xl"
+            className="font-sans text-2xl font-medium leading-relaxed text-text md:text-3xl lg:text-4xl"
           />
         </div>
         <ScrollReveal delay={0.4}>
-          <p className="mt-8 font-body text-sm uppercase tracking-[0.15em] text-gold">
+          <p className="mt-8 font-sans text-sm uppercase tracking-[0.15em] text-muted">
             Isabella Montague, Founder
           </p>
         </ScrollReveal>

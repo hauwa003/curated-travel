@@ -44,20 +44,20 @@ export default function JournalPage() {
                   />
                   <div>
                     <div className="flex items-center gap-4">
-                      <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
+                      <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                         {featured.category}
                       </span>
-                      <span className="font-body text-xs text-charcoal/40">
+                      <span className="font-sans text-xs text-text/40">
                         {featured.readTime}
                       </span>
                     </div>
-                    <h2 className="mt-4 font-display text-3xl font-light text-charcoal transition-colors group-hover:text-gold md:text-4xl">
+                    <h2 className="mt-4 font-sans text-3xl font-medium text-text transition-colors group-hover:text-muted md:text-4xl">
                       {featured.title}
                     </h2>
-                    <p className="mt-4 font-body text-base leading-relaxed text-charcoal/60">
+                    <p className="mt-4 font-sans text-base leading-relaxed text-text/60">
                       {featured.excerpt}
                     </p>
-                    <p className="mt-6 font-body text-sm text-charcoal/40">
+                    <p className="mt-6 font-sans text-sm text-text/40">
                       By {featured.author} &middot;{" "}
                       {new Date(featured.date).toLocaleDateString("en-GB", {
                         day: "numeric",
@@ -88,17 +88,17 @@ export default function JournalPage() {
                         />
                         <div className="mt-5">
                           <div className="flex items-center gap-4">
-                            <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
+                            <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                               {post.category}
                             </span>
-                            <span className="font-body text-xs text-charcoal/40">
+                            <span className="font-sans text-xs text-text/40">
                               {post.readTime}
                             </span>
                           </div>
-                          <h3 className="mt-2 font-display text-2xl font-light text-charcoal transition-colors group-hover:text-gold">
+                          <h3 className="mt-2 font-sans text-2xl font-medium text-text transition-colors group-hover:text-muted">
                             {post.title}
                           </h3>
-                          <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
+                          <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">
                             {post.excerpt}
                           </p>
                         </div>

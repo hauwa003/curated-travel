@@ -47,7 +47,7 @@ export default function SubPageHero({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2, ease: easeSmooth }}
-        className="absolute inset-0 bg-navy/40"
+        className="absolute inset-0 bg-dark/40"
       />
 
       {/* Content */}
@@ -57,7 +57,7 @@ export default function SubPageHero({
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.4, ease: easeSmooth }}
-          className="mt-4 font-display text-5xl font-light text-white md:text-6xl lg:text-7xl"
+          className="mt-4 font-sans text-5xl font-medium text-white md:text-6xl lg:text-7xl"
         >
           {title}
         </motion.h1>
@@ -66,7 +66,7 @@ export default function SubPageHero({
             initial={{ opacity: 0, filter: "blur(8px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.6, ease: easeSmooth }}
-            className="mt-4 max-w-lg font-body text-base text-white/70"
+            className="mt-4 max-w-lg font-sans text-base text-white/70"
           >
             {subtitle}
           </motion.p>
