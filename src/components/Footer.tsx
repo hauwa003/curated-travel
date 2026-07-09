@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/">
               <span className="font-heading text-2xl font-medium tracking-wide text-white">
-                Vela <span className="text-muted">&</span> Co.
+                Vela <span className="text-white/70">&</span> Co.
               </span>
             </Link>
             <p className="mt-4 max-w-xs font-sans text-sm leading-relaxed">
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
+            <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
               Explore
             </h4>
             <ul className="mt-4 space-y-3">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
+            <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
               Company
             </h4>
             <ul className="mt-4 space-y-3">
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
+            <h4 className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
               Contact
             </h4>
             <div className="mt-4 space-y-3 font-sans text-sm">
@@ -90,9 +90,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/20">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-12">
-          <p className="font-sans text-xs text-white/60">
+          <p className="font-sans text-xs text-white/80">
             &copy; {new Date().getFullYear()} Vela & Co. All rights reserved.
           </p>
           <div className="flex gap-6">
@@ -100,7 +100,7 @@ export default function Footer() {
               <a
                 key={social}
                 href="#"
-                className="font-sans text-xs uppercase tracking-[0.1em] text-white/60 transition-colors hover:text-muted"
+                className="font-sans text-xs uppercase tracking-[0.1em] text-white/80 transition-colors hover:text-white"
               >
                 {social}
               </a>

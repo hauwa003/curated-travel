@@ -50,7 +50,7 @@ export default function ReviewsPage() {
                       <p className="mt-1 font-sans text-sm text-text/70">
                         {testimonial.location}
                       </p>
-                      <p className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-text/60">
+                      <p className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-muted">
                         {testimonial.trip}
                       </p>
                     </div>
@@ -74,7 +74,7 @@ export default function ReviewsPage() {
               <h2 className="font-heading text-3xl font-medium text-white md:text-4xl">
                 Ready to Write Your Own Story?
               </h2>
-              <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/60">
+              <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/80">
                 Let us craft a journey that you&apos;ll be sharing for years to come.
               </p>
               <div className="mt-8">

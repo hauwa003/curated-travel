@@ -45,7 +45,7 @@ export default function JournalPreview() {
                     <h3 className="mt-2 font-heading text-2xl font-medium text-text transition-colors group-hover:text-muted">
                       {post.title}
                     </h3>
-                    <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">
+                    <p className="mt-2 font-sans text-sm leading-relaxed text-muted">
                       {post.excerpt}
                     </p>
                   </div>

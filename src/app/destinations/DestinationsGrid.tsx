@@ -26,7 +26,7 @@ export default function DestinationsGrid() {
             className={`px-5 py-2 font-sans text-xs uppercase tracking-[0.15em] transition-[color,background-color,border-color] duration-200 ${
               activeRegion === region
                 ? "bg-text text-white"
-                : "border border-text/20 text-text/60 hover:border-text hover:text-muted"
+                : "border border-text/20 text-muted hover:border-text hover:text-text"
             }`}
           >
             {region}
@@ -62,19 +62,19 @@ export default function DestinationsGrid() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-300 group-hover:-translate-y-2">
-                  <span className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
+                  <span className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
                     {dest.region}
                   </span>
                   <h3 className="mt-2 font-heading text-2xl font-medium text-white">
                     {dest.name}
                   </h3>
-                  <p className="mt-1 font-sans text-sm text-white/60">
+                  <p className="mt-1 font-sans text-sm text-white/80">
                     {dest.tagline}
                   </p>
                   <p className="mt-3 max-h-0 overflow-hidden font-sans text-sm leading-relaxed text-white/70 transition-[max-height] duration-500 group-hover:max-h-40">
                     {dest.description}
                   </p>
-                  <span className="mt-2 inline-block font-sans text-xs uppercase tracking-[0.15em] text-muted opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="mt-2 inline-block font-sans text-xs uppercase tracking-[0.15em] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     Explore &rarr;
                   </span>
                 </div>

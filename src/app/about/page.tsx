@@ -93,7 +93,7 @@ export default function AboutPage() {
                     <h3 className="font-heading text-2xl font-medium text-text">
                       {pillar.title}
                     </h3>
-                    <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
+                    <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
                       {pillar.description}
                     </p>
                   </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
               <h2 className="mt-4 font-heading text-4xl font-medium text-white md:text-5xl">
                 Trusted Worldwide
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/60">
+              <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/80">
                 As proud members of the Virtuoso network — the world&apos;s leading luxury travel advisory
                 group — our clients benefit from exclusive rates, upgrades, and amenities at over 2,200
                 preferred properties worldwide.
@@ -122,7 +122,7 @@ export default function AboutPage() {
               {["Virtuoso Member", "Condé Nast Top Advisor", "Travel + Leisure A-List", "20+ Years Experience"].map(
                 (credential, i) => (
                   <ScrollReveal key={credential} delay={i * 0.1}>
-                    <div className="border-t border-text/20 pt-4">
+                    <div className="border-t border-white/20 pt-4">
                       <p className="font-sans text-sm text-white/80">{credential}</p>
                     </div>
                   </ScrollReveal>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                     <p className="mt-1 font-sans text-xs uppercase tracking-[0.15em] text-muted">
                       {member.role}
                     </p>
-                    <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
+                    <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
                       {member.bio}
                     </p>
                   </div>

@@ -25,7 +25,7 @@ export default function PremiumInput({
   const isActive = focused || value.length > 0;
 
   const baseInputClass =
-    "peer w-full border-0 border-b border-text/15 bg-transparent pt-5 pb-2 font-sans text-base text-text transition-[border-color,background-color] duration-200 focus:border-transparent focus:bg-text/[0.03]";
+    "peer w-full border-0 border-b border-text/30 bg-transparent pt-5 pb-2 font-sans text-base text-text transition-[border-color,background-color] duration-200 focus:border-transparent focus:bg-surface";
 
   return (
     <div className="input-underline relative">
@@ -34,7 +34,7 @@ export default function PremiumInput({
         className={`pointer-events-none absolute left-0 font-sans uppercase tracking-[0.15em] transition-[top,font-size,color] duration-200 ${
           isActive
             ? "top-0 text-[10px] text-muted"
-            : "top-5 text-xs text-text/50"
+            : "top-5 text-xs text-muted"
         }`}
       >
         {label}
@@ -49,7 +49,7 @@ export default function PremiumInput({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => setValue(e.target.value)}
-          className={`${baseInputClass} resize-none placeholder:text-text/30`}
+          className={`${baseInputClass} resize-none placeholder:text-muted`}
         />
       ) : (
         <input
@@ -60,7 +60,7 @@ export default function PremiumInput({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => setValue(e.target.value)}
-          className={`${baseInputClass} placeholder:text-text/30`}
+          className={`${baseInputClass} placeholder:text-muted`}
         />
       )}
     </div>
