@@ -102,11 +102,13 @@ input:focus, textarea:focus, select:focus {
 
 /* Instagram marquee */
 .marquee-track {
-  animation: marquee 30s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 
-.marquee-track:hover {
-  animation-play-state: paused;
+@media (min-width: 640px) {
+  .marquee-track {
+    animation-duration: 30s;
+  }
 }
 
 @keyframes marquee {
