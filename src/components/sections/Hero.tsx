@@ -64,7 +64,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.2, delay: 0.5, ease: easeExpo }}
-          className="mt-6 max-w-4xl font-heading text-5xl font-medium leading-[1.1] text-white md:text-7xl lg:text-8xl"
+          className="mt-6 max-w-4xl font-heading text-4xl font-medium text-white md:text-5xl lg:text-6xl"
         >
           Travel as It Was
           <br />
