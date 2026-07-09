@@ -23,7 +23,7 @@ export default function JournalPreview() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {posts.map((post, i) => (
-            <ScrollReveal key={post.slug} delay={i * 0.15}>
+            <ScrollReveal key={post.slug} delay={i * 0.07}>
               <Link href={`/journal/${post.slug}`} className="group block">
                 <motion.div
                   whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(0, 0, 0, 0.12)" }}
@@ -34,7 +34,7 @@ export default function JournalPreview() {
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>

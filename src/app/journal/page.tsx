@@ -47,7 +47,7 @@ export default function JournalPage() {
                       <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                         {featured.category}
                       </span>
-                      <span className="font-sans text-xs text-text/40">
+                      <span className="font-sans text-xs text-text/60">
                         {featured.readTime}
                       </span>
                     </div>
@@ -57,7 +57,7 @@ export default function JournalPage() {
                     <p className="mt-4 font-sans text-base leading-relaxed text-text/60">
                       {featured.excerpt}
                     </p>
-                    <p className="mt-6 font-sans text-sm text-text/40">
+                    <p className="mt-6 font-sans text-sm text-text/60">
                       By {featured.author} &middot;{" "}
                       {new Date(featured.date).toLocaleDateString("en-GB", {
                         day: "numeric",
@@ -91,7 +91,7 @@ export default function JournalPage() {
                             <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                               {post.category}
                             </span>
-                            <span className="font-sans text-xs text-text/40">
+                            <span className="font-sans text-xs text-text/60">
                               {post.readTime}
                             </span>
                           </div>

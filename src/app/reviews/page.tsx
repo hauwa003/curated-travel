@@ -47,10 +47,10 @@ export default function ReviewsPage() {
                       <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
                         {testimonial.author}
                       </p>
-                      <p className="mt-1 font-sans text-sm text-text/50">
+                      <p className="mt-1 font-sans text-sm text-text/70">
                         {testimonial.location}
                       </p>
-                      <p className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-text/40">
+                      <p className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-text/60">
                         {testimonial.trip}
                       </p>
                     </div>

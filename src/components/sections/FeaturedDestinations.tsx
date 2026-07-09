@@ -40,11 +40,11 @@ export default function FeaturedDestinations() {
                       src={dest.image}
                       alt={dest.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       sizes={i === 0 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-500 group-hover:-translate-y-2 md:p-8">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-300 group-hover:-translate-y-2 md:p-8">
                       <span className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
                         {dest.region}
                       </span>

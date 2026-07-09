@@ -49,14 +49,14 @@ export default async function JournalArticlePage({ params }: PageProps) {
             <span className="font-sans text-sm text-white/60">
               By {post.author}
             </span>
-            <span className="font-sans text-sm text-white/40">
+            <span className="font-sans text-sm text-white/60">
               {new Date(post.date).toLocaleDateString("en-GB", {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
               })}
             </span>
-            <span className="font-sans text-sm text-white/40">
+            <span className="font-sans text-sm text-white/60">
               {post.readTime}
             </span>
           </div>
