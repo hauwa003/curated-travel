@@ -44,7 +44,8 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-heading);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
 }
 
 /* Film grain overlay */
