@@ -10,7 +10,7 @@ import CtaSection from "@/components/sections/CtaSection";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <Hero />
       <BrandStatement />
       <FeaturedDestinations />

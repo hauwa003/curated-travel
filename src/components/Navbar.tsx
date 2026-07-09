@@ -14,9 +14,15 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  transparent?: boolean;
+}
+
+export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isLight = transparent && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -44,8 +50,8 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
           <Link href="/" className="relative z-10">
-            <span className="font-heading text-2xl font-medium tracking-wide text-text">
-              Vela <span className="text-muted">&</span> Co.
+            <span className={`font-heading text-2xl font-medium tracking-wide transition-colors duration-300 ${isLight ? "text-white" : "text-text"}`}>
+              Vela <span className={isLight ? "text-white/70" : "text-muted"}>&</span> Co.
             </span>
           </Link>
 
@@ -55,14 +61,11 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="group relative font-sans text-sm uppercase tracking-[0.12em] text-text transition-colors hover:text-muted"
-                style={{ textShadow: "none" }}
-                onMouseEnter={(e) => { e.currentTarget.style.textShadow = "0 0 12px rgba(0, 0, 0, 0.3)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.textShadow = "none"; }}
+                className={`group relative font-sans text-sm uppercase tracking-[0.12em] transition-colors duration-300 ${isLight ? "text-white/90 hover:text-white" : "text-text hover:text-muted"}`}
               >
                 {link.label}
                 <span
-                  className="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-text transition-[width] duration-200 group-hover:w-full"
+                  className={`absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 transition-[width] duration-200 group-hover:w-full ${isLight ? "bg-white" : "bg-text"}`}
                   style={{ transformOrigin: "center" }}
                 />
               </Link>
@@ -77,15 +80,15 @@ export default function Navbar() {
           >
             <motion.span
               animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="block h-px w-6 bg-text"
+              className={`block h-px w-6 ${isLight ? "bg-white" : "bg-text"}`}
             />
             <motion.span
               animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-px w-6 bg-text"
+              className={`block h-px w-6 ${isLight ? "bg-white" : "bg-text"}`}
             />
             <motion.span
               animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="block h-px w-6 bg-text"
+              className={`block h-px w-6 ${isLight ? "bg-white" : "bg-text"}`}
             />
           </button>
         </nav>

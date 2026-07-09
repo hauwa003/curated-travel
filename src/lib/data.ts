@@ -35,6 +35,7 @@ export const destinations: Destination[] = [
     tagline: "The Edge of the Earth",
     description: "Jagged granite spires rising from pristine wilderness, glacial lakes of impossible blue, and a silence so complete it becomes its own kind of luxury.",
     image: "https://images.unsplash.com/photo-1531761535209-180857e963b9?w=1200&q=80",
+    featured: true,
   },
   {
     slug: "maldives",
@@ -43,6 +44,7 @@ export const destinations: Destination[] = [
     tagline: "Paradise, Reimagined",
     description: "Overwater villas suspended above crystalline lagoons, private sandbanks accessible only by seaplane, and marine life so abundant the reef becomes your living room.",
     image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=80",
+    featured: true,
   },
   {
     slug: "marrakech",
