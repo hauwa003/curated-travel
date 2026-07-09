@@ -44,7 +44,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <span className="font-sans text-xs uppercase tracking-[0.3em] text-muted">
+          <span className="font-sans text-xs uppercase tracking-[0.3em] text-white/70">
             {taglineChars.map((char, i) => (
               <motion.span
                 key={i}
@@ -90,7 +90,7 @@ export default function Hero() {
           <Button href="/destinations" variant="primary">
             Explore Destinations
           </Button>
-          <Button href="/contact" variant="secondary" className="border-white/40 text-white hover:bg-white hover:text-dark">
+          <Button href="/contact" variant="secondary" className="border-white/60 text-white hover:bg-white hover:text-dark">
             Begin Your Journey
           </Button>
         </motion.div>
@@ -106,9 +106,9 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="h-10 w-6 rounded-full border border-white/30 p-1"
+          className="h-10 w-6 rounded-full border border-white/50 p-1"
         >
-          <div className="mx-auto h-2 w-0.5 rounded-full bg-white/60" />
+          <div className="mx-auto h-2 w-0.5 rounded-full bg-white/80" />
         </motion.div>
       </motion.div>
     </section>

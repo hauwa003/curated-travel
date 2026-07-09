@@ -71,7 +71,7 @@ export default function TestimonialsTeaser() {
                   </div>
                 )}
                 <div className="text-left">
-                  <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
+                  <p className="font-sans text-sm uppercase tracking-[0.15em] text-white/70">
                     {t.author}
                   </p>
                   <p className="mt-0.5 font-sans text-sm text-white/70">

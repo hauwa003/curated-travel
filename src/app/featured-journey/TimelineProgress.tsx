@@ -60,7 +60,7 @@ export default function TimelineProgress({ itinerary }: TimelineProgressProps) {
                 <h3 className="font-sans text-xl font-medium text-text">
                   {day.title}
                 </h3>
-                <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">
+                <p className="mt-2 font-sans text-sm leading-relaxed text-muted">
                   {day.description}
                 </p>
               </div>

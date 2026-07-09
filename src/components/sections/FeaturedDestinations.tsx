@@ -45,7 +45,7 @@ export default function FeaturedDestinations() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-300 group-hover:-translate-y-2 md:p-8">
-                      <span className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
+                      <span className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
                         {dest.region}
                       </span>
                       <h3 className={`mt-2 font-heading font-medium text-white ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
@@ -54,7 +54,7 @@ export default function FeaturedDestinations() {
                       <p className="mt-2 max-w-md font-sans text-sm text-white/70">
                         {dest.tagline}
                       </p>
-                      <span className="mt-3 inline-block font-sans text-xs uppercase tracking-[0.15em] text-muted opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span className="mt-3 inline-block font-sans text-xs uppercase tracking-[0.15em] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         Explore &rarr;
                       </span>
                     </div>

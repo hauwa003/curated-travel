@@ -80,7 +80,7 @@ export default function ServicesPage() {
                       {service.features.map((feature) => (
                         <li
                           key={feature}
-                          className="flex items-center gap-3 font-sans text-sm text-text/60"
+                          className="flex items-center gap-3 font-sans text-sm text-muted"
                         >
                           <span className="h-px w-4 bg-text" />
                           {feature}
@@ -117,7 +117,7 @@ export default function ServicesPage() {
                     <h3 className="mt-4 font-sans text-xl font-medium text-text">
                       {step.title}
                     </h3>
-                    <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
+                    <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
                       {step.description}
                     </p>
                   </div>

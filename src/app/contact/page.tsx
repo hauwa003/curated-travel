@@ -50,7 +50,7 @@ export default function ContactPage() {
                     <br />
                     Dream Journey
                   </h2>
-                  <p className="mt-4 font-sans text-base text-text/60">
+                  <p className="mt-4 font-sans text-base text-muted">
                     Share your travel aspirations and we&apos;ll be in touch within 24 hours to begin crafting your bespoke experience.
                   </p>
 
@@ -98,15 +98,15 @@ export default function ContactPage() {
         <section className="bg-dark py-16">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row lg:px-12">
             <div className="text-center md:text-left">
-              <p className="font-sans text-xs uppercase tracking-[0.2em] text-muted">Email</p>
+              <p className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">Email</p>
               <p className="mt-1 font-sans text-base text-white/70">hello@velaandco.com</p>
             </div>
             <div className="text-center">
-              <p className="font-sans text-xs uppercase tracking-[0.2em] text-muted">Phone</p>
+              <p className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">Phone</p>
               <p className="mt-1 font-sans text-base text-white/70">+44 (0) 20 7946 0123</p>
             </div>
             <div className="text-center md:text-right">
-              <p className="font-sans text-xs uppercase tracking-[0.2em] text-muted">Address</p>
+              <p className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">Address</p>
               <p className="mt-1 font-sans text-base text-white/70">14 Albemarle Street, Mayfair, London W1S 4HJ</p>
             </div>
           </div>

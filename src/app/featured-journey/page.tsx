@@ -34,11 +34,11 @@ export default function FeaturedJourneyPage() {
             {journey.subtitle}
           </p>
           <div className="mt-6 flex flex-wrap gap-6">
-            <span className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
+            <span className="font-sans text-sm uppercase tracking-[0.15em] text-white/70">
               {journey.duration}
             </span>
-            <span className="font-sans text-sm text-white/50">|</span>
-            <span className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
+            <span className="font-sans text-sm text-white/70">|</span>
+            <span className="font-sans text-sm uppercase tracking-[0.15em] text-white/70">
               {journey.startingPrice}
             </span>
           </div>
@@ -128,7 +128,7 @@ export default function FeaturedJourneyPage() {
               <h2 className="font-heading text-3xl font-medium text-white md:text-4xl">
                 Make This Journey Yours
               </h2>
-              <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/60">
+              <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/80">
                 Every Vela & Co. journey is tailored to you. Let us know what speaks to you, and we&apos;ll craft something extraordinary.
               </p>
               <div className="mt-8">

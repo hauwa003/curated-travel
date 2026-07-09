@@ -46,17 +46,17 @@ export default async function JournalArticlePage({ params }: PageProps) {
           title={post.title}
         >
           <div className="mt-4 flex items-center gap-4">
-            <span className="font-sans text-sm text-white/60">
+            <span className="font-sans text-sm text-white/80">
               By {post.author}
             </span>
-            <span className="font-sans text-sm text-white/60">
+            <span className="font-sans text-sm text-white/80">
               {new Date(post.date).toLocaleDateString("en-GB", {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
               })}
             </span>
-            <span className="font-sans text-sm text-white/60">
+            <span className="font-sans text-sm text-white/80">
               {post.readTime}
             </span>
           </div>
@@ -89,7 +89,7 @@ export default async function JournalArticlePage({ params }: PageProps) {
               <div className="mt-12 text-center">
                 <Link
                   href="/journal"
-                  className="font-sans text-sm uppercase tracking-[0.15em] text-muted transition-colors hover:text-subtle"
+                  className="font-sans text-sm uppercase tracking-[0.15em] text-muted transition-colors hover:text-muted"
                 >
                   &larr; Back to Journal
                 </Link>

@@ -47,17 +47,17 @@ export default function JournalPage() {
                       <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                         {featured.category}
                       </span>
-                      <span className="font-sans text-xs text-text/60">
+                      <span className="font-sans text-xs text-muted">
                         {featured.readTime}
                       </span>
                     </div>
                     <h2 className="mt-4 font-heading text-3xl font-medium text-text transition-colors group-hover:text-muted md:text-4xl">
                       {featured.title}
                     </h2>
-                    <p className="mt-4 font-sans text-base leading-relaxed text-text/60">
+                    <p className="mt-4 font-sans text-base leading-relaxed text-muted">
                       {featured.excerpt}
                     </p>
-                    <p className="mt-6 font-sans text-sm text-text/60">
+                    <p className="mt-6 font-sans text-sm text-muted">
                       By {featured.author} &middot;{" "}
                       {new Date(featured.date).toLocaleDateString("en-GB", {
                         day: "numeric",
@@ -91,14 +91,14 @@ export default function JournalPage() {
                             <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                               {post.category}
                             </span>
-                            <span className="font-sans text-xs text-text/60">
+                            <span className="font-sans text-xs text-muted">
                               {post.readTime}
                             </span>
                           </div>
                           <h3 className="mt-2 font-heading text-2xl font-medium text-text transition-colors group-hover:text-muted">
                             {post.title}
                           </h3>
-                          <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">
+                          <p className="mt-2 font-sans text-sm leading-relaxed text-muted">
                             {post.excerpt}
                           </p>
                         </div>
