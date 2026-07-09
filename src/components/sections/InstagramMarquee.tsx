@@ -38,7 +38,7 @@ export default function InstagramMarquee() {
         {doubled.map((src, i) => (
           <div
             key={i}
-            className="relative mx-2 aspect-square w-[280px] shrink-0 overflow-hidden md:w-[320px]"
+            className="relative mx-2 aspect-square w-[200px] shrink-0 overflow-hidden sm:w-[280px] md:w-[320px]"
           >
             <Image
               src={src}
