@@ -6,6 +6,9 @@ export interface Destination {
   description: string;
   image: string;
   featured?: boolean;
+  duration: string;
+  startingPrice: string;
+  includes: string[];
 }
 
 export interface Service {
