@@ -22,7 +22,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const isLight = transparent && !scrolled;
+  const isLight = transparent && !scrolled && !mobileOpen;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
