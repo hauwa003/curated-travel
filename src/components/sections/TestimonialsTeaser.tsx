@@ -44,7 +44,7 @@ export default function TestimonialsTeaser() {
             key={`quote-${current}`}
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="font-sans text-6xl text-muted/30"
+            className="font-heading text-6xl text-muted/30"
           >
             &ldquo;
           </motion.div>
@@ -59,7 +59,7 @@ export default function TestimonialsTeaser() {
               exit={{ opacity: 0, filter: "blur(8px)" }}
               transition={{ duration: 0.6 }}
             >
-              <blockquote className="font-sans text-xl font-medium leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
+              <blockquote className="font-heading text-xl font-medium leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
                 {t.quote}
               </blockquote>
               <div className="mt-8">

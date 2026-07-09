@@ -65,7 +65,7 @@ export default function DestinationsGrid() {
                   <span className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
                     {dest.region}
                   </span>
-                  <h3 className="mt-2 font-sans text-2xl font-medium text-white">
+                  <h3 className="mt-2 font-heading text-2xl font-medium text-white">
                     {dest.name}
                   </h3>
                   <p className="mt-1 font-sans text-sm text-white/60">

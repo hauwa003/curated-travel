@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/">
-              <span className="font-sans text-2xl font-medium tracking-wide text-white">
+              <span className="font-heading text-2xl font-medium tracking-wide text-white">
                 Vela <span className="text-muted">&</span> Co.
               </span>
             </Link>

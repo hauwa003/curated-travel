@@ -46,7 +46,7 @@ export default function CtaSection() {
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: easeSmooth }}
-            className="max-w-3xl font-sans text-4xl font-medium text-white md:text-5xl lg:text-6xl"
+            className="max-w-3xl font-heading text-4xl font-medium text-white md:text-5xl lg:text-6xl"
           >
             Your Next Chapter
             <br />

@@ -45,7 +45,7 @@ export default function ContactPage() {
               <ScrollReveal delay={0.2}>
                 <div>
                   <SectionLabel>Begin Your Journey</SectionLabel>
-                  <h2 className="mt-4 font-sans text-3xl font-medium text-text md:text-4xl">
+                  <h2 className="mt-4 font-heading text-3xl font-medium text-text md:text-4xl">
                     Tell Us About Your
                     <br />
                     Dream Journey

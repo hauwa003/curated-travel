@@ -50,7 +50,7 @@ export default function FeaturedJourneyPage() {
             <div className="grid gap-16 lg:grid-cols-2">
               <ScrollReveal>
                 <SectionLabel>The Journey</SectionLabel>
-                <h2 className="mt-4 font-sans text-3xl font-medium text-text md:text-4xl">
+                <h2 className="mt-4 font-heading text-3xl font-medium text-text md:text-4xl">
                   About This Experience
                 </h2>
                 <p className="mt-6 font-sans text-base leading-[1.8] text-text/70">
@@ -87,7 +87,7 @@ export default function FeaturedJourneyPage() {
           <div className="mx-auto max-w-4xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">Day by Day</SectionLabel>
-              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+              <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
                 The Itinerary
               </h2>
             </ScrollReveal>
@@ -101,7 +101,7 @@ export default function FeaturedJourneyPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">Gallery</SectionLabel>
-              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+              <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
                 Visual Inspirations
               </h2>
             </ScrollReveal>
@@ -125,7 +125,7 @@ export default function FeaturedJourneyPage() {
         <section className="bg-dark py-24 md:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <ScrollReveal>
-              <h2 className="font-sans text-3xl font-medium text-white md:text-4xl">
+              <h2 className="font-heading text-3xl font-medium text-white md:text-4xl">
                 Make This Journey Yours
               </h2>
               <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/60">

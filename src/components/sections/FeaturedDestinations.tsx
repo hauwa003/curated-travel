@@ -16,7 +16,7 @@ export default function FeaturedDestinations() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <ScrollReveal>
           <SectionLabel align="center">Destinations</SectionLabel>
-          <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
+          <h2 className="mt-4 text-center font-heading text-4xl font-medium text-text md:text-5xl">
             Where We&apos;ll Take You
           </h2>
         </ScrollReveal>
@@ -48,7 +48,7 @@ export default function FeaturedDestinations() {
                       <span className="font-sans text-xs uppercase tracking-[0.2em] text-muted">
                         {dest.region}
                       </span>
-                      <h3 className={`mt-2 font-sans font-medium text-white ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+                      <h3 className={`mt-2 font-heading font-medium text-white ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
                         {dest.name}
                       </h3>
                       <p className="mt-2 max-w-md font-sans text-sm text-white/70">

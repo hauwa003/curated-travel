@@ -18,7 +18,7 @@ function DayNumber({ day }: { day: number }) {
       initial={{ opacity: 0, y: 10 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, ease: easeSmooth }}
-      className="font-sans text-3xl font-medium text-muted/40"
+      className="font-heading text-3xl font-medium text-muted/40"
     >
       {display}
     </motion.span>

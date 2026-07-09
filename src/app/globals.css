@@ -10,6 +10,7 @@
   --color-white: #FFFFFF;
 
   --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Bricolage Grotesque", sans-serif;
 
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -39,6 +40,11 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.04em;
 }
 
 /* Film grain overlay */

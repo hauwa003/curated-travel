@@ -69,7 +69,7 @@ export default async function JournalArticlePage({ params }: PageProps) {
               <ScrollReveal key={i}>
                 {i === 1 ? (
                   <blockquote className="my-12 border-l-2 border-text pl-8">
-                    <p className="font-sans text-2xl font-medium leading-relaxed text-text md:text-3xl">
+                    <p className="font-heading text-2xl font-medium leading-relaxed text-text md:text-3xl">
                       {paragraph}
                     </p>
                   </blockquote>
