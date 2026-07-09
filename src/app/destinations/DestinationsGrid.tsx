@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { destinations } from "@/lib/data";
 
@@ -52,33 +53,35 @@ export default function DestinationsGrid() {
               whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(12, 27, 42, 0.16)" }}
               className="group relative overflow-hidden"
             >
-              <div className="relative aspect-[3/4]">
-                <Image
-                  src={dest.image}
-                  alt={dest.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-300 group-hover:-translate-y-2">
-                  <span className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
-                    {dest.region}
-                  </span>
-                  <h3 className="mt-2 font-heading text-2xl font-medium text-white">
-                    {dest.name}
-                  </h3>
-                  <p className="mt-1 font-sans text-sm text-white/80">
-                    {dest.tagline}
-                  </p>
-                  <p className="mt-3 max-h-0 overflow-hidden font-sans text-sm leading-relaxed text-white/70 transition-[max-height] duration-500 group-hover:max-h-40">
-                    {dest.description}
-                  </p>
-                  <span className="mt-2 inline-block font-sans text-xs uppercase tracking-[0.15em] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Explore &rarr;
-                  </span>
+              <Link href={`/destinations/${dest.slug}`} className="block">
+                <div className="relative aspect-[3/4]">
+                  <Image
+                    src={dest.image}
+                    alt={dest.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-300 group-hover:-translate-y-2">
+                    <span className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
+                      {dest.region}
+                    </span>
+                    <h3 className="mt-2 font-heading text-2xl font-medium text-white">
+                      {dest.name}
+                    </h3>
+                    <p className="mt-1 font-sans text-sm text-white/80">
+                      {dest.tagline}
+                    </p>
+                    <p className="mt-3 max-h-0 overflow-hidden font-sans text-sm leading-relaxed text-white/70 transition-[max-height] duration-500 group-hover:max-h-40">
+                      {dest.description}
+                    </p>
+                    <span className="mt-2 inline-block font-sans text-xs uppercase tracking-[0.15em] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      Explore &rarr;
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </AnimatePresence>
