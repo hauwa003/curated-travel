@@ -20,7 +20,7 @@ export default function FeaturedJourneyPage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         {/* Hero */}
         <SubPageHero

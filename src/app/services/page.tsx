@@ -41,7 +41,7 @@ const processSteps = [
 export default function ServicesPage() {
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         <SubPageHero
           image="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80"

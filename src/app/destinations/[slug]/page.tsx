@@ -42,7 +42,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         {/* Hero */}
         <SubPageHero

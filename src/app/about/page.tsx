@@ -38,7 +38,7 @@ const pillars = [
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         <SubPageHero
           image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80"

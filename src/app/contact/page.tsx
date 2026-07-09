@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         <SubPageHero
           image="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&q=80"

@@ -36,7 +36,7 @@ export default async function JournalArticlePage({ params }: PageProps) {
 
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         {/* Hero */}
         <SubPageHero
