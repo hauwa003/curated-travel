@@ -31,7 +31,7 @@ export default function Hero() {
         initial={{ opacity: 0.7 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: easeSmooth }}
-        className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/20 to-navy/60"
+        className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark/60"
       />
 
       {/* Content */}
@@ -42,7 +42,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <span className="font-body text-xs uppercase tracking-[0.3em] text-gold">
+          <span className="font-sans text-xs uppercase tracking-[0.3em] text-muted">
             {taglineChars.map((char, i) => (
               <motion.span
                 key={i}
@@ -62,18 +62,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.2, delay: 0.5, ease: easeExpo }}
-          className="mt-6 max-w-4xl font-display text-5xl font-light leading-[1.1] text-white md:text-7xl lg:text-8xl"
+          className="mt-6 max-w-4xl font-sans text-5xl font-medium leading-[1.1] text-white md:text-7xl lg:text-8xl"
         >
           Travel as It Was
           <br />
-          <span className="italic">Meant to Be</span>
+          Meant to Be
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.8, ease: easeExpo }}
-          className="mt-6 max-w-lg font-body text-base leading-relaxed text-white/80 md:text-lg"
+          className="mt-6 max-w-lg font-sans text-base leading-relaxed text-white/80 md:text-lg"
         >
           Bespoke journeys to the world&apos;s most extraordinary destinations,
           crafted by advisors who have been there before you.
@@ -88,7 +88,7 @@ export default function Hero() {
           <Button href="/destinations" variant="primary">
             Explore Destinations
           </Button>
-          <Button href="/contact" variant="secondary" className="border-white/40 text-white hover:bg-white hover:text-navy">
+          <Button href="/contact" variant="secondary" className="border-white/40 text-white hover:bg-white hover:text-dark">
             Begin Your Journey
           </Button>
         </motion.div>

@@ -14,7 +14,7 @@ export default function CtaSection() {
     offset: ["start end", "end start"],
   });
 
-  // Gradient shifts from cool navy to warm navy-gold
+  // Gradient shifts from cool dark to warm dark
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 0.5, 0.4]);
   const warmOverlay = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.08, 0.15]);
 
@@ -29,13 +29,13 @@ export default function CtaSection() {
 
       {/* Cool overlay */}
       <motion.div
-        className="absolute inset-0 bg-navy"
+        className="absolute inset-0 bg-dark"
         style={{ opacity: overlayOpacity }}
       />
 
-      {/* Warm gold tint */}
+      {/* Warm tint */}
       <motion.div
-        className="absolute inset-0 bg-gold"
+        className="absolute inset-0 bg-text"
         style={{ opacity: warmOverlay }}
       />
 
@@ -46,13 +46,13 @@ export default function CtaSection() {
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: easeSmooth }}
-            className="max-w-3xl font-display text-4xl font-light text-white md:text-5xl lg:text-6xl"
+            className="max-w-3xl font-sans text-4xl font-medium text-white md:text-5xl lg:text-6xl"
           >
             Your Next Chapter
             <br />
-            <span className="italic">Begins Here</span>
+            Begins Here
           </motion.h2>
-          <p className="mx-auto mt-6 max-w-lg font-body text-base text-white/70">
+          <p className="mx-auto mt-6 max-w-lg font-sans text-base text-white/70">
             Tell us where your imagination wanders, and we&apos;ll craft a
             journey that exceeds it.
           </p>

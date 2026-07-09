@@ -31,7 +31,7 @@ export default function SectionLabel({
           },
         }}
         style={{ originX: 0 }}
-        className="h-px w-8 bg-gold"
+        className="h-px w-8 bg-text"
       />
       <motion.span
         variants={{
@@ -41,7 +41,7 @@ export default function SectionLabel({
             transition: { duration: 0.5, delay: 0.3, ease: easeSmooth },
           },
         }}
-        className="text-xs font-body uppercase tracking-[0.2em] text-gold"
+        className="text-xs font-sans uppercase tracking-[0.2em] text-muted"
       >
         {children}
       </motion.span>

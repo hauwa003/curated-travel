@@ -25,16 +25,16 @@ export default function PremiumInput({
   const isActive = focused || value.length > 0;
 
   const baseInputClass =
-    "peer w-full border-0 border-b border-charcoal/20 bg-transparent pt-5 pb-2 font-body text-base text-charcoal transition-all duration-300 focus:border-transparent focus:bg-gold/[0.03]";
+    "peer w-full border-0 border-b border-text/15 bg-transparent pt-5 pb-2 font-sans text-base text-text transition-all duration-300 focus:border-transparent focus:bg-text/[0.03]";
 
   return (
     <div className="input-underline relative">
       {/* Floating label */}
       <label
-        className={`pointer-events-none absolute left-0 font-body uppercase tracking-[0.15em] transition-all duration-300 ${
+        className={`pointer-events-none absolute left-0 font-sans uppercase tracking-[0.15em] transition-all duration-300 ${
           isActive
-            ? "top-0 text-[10px] text-gold"
-            : "top-5 text-xs text-charcoal/50"
+            ? "top-0 text-[10px] text-muted"
+            : "top-5 text-xs text-text/50"
         }`}
       >
         {label}
@@ -49,7 +49,7 @@ export default function PremiumInput({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => setValue(e.target.value)}
-          className={`${baseInputClass} resize-none placeholder:text-charcoal/30`}
+          className={`${baseInputClass} resize-none placeholder:text-text/30`}
         />
       ) : (
         <input
@@ -60,7 +60,7 @@ export default function PremiumInput({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => setValue(e.target.value)}
-          className={`${baseInputClass} placeholder:text-charcoal/30`}
+          className={`${baseInputClass} placeholder:text-text/30`}
         />
       )}
     </div>

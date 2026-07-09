@@ -46,17 +46,17 @@ export default async function JournalArticlePage({ params }: PageProps) {
           title={post.title}
         >
           <div className="mt-4 flex items-center gap-4">
-            <span className="font-body text-sm text-white/60">
+            <span className="font-sans text-sm text-white/60">
               By {post.author}
             </span>
-            <span className="font-body text-sm text-white/40">
+            <span className="font-sans text-sm text-white/40">
               {new Date(post.date).toLocaleDateString("en-GB", {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
               })}
             </span>
-            <span className="font-body text-sm text-white/40">
+            <span className="font-sans text-sm text-white/40">
               {post.readTime}
             </span>
           </div>
@@ -68,13 +68,13 @@ export default async function JournalArticlePage({ params }: PageProps) {
             {paragraphs.map((paragraph, i) => (
               <ScrollReveal key={i}>
                 {i === 1 ? (
-                  <blockquote className="my-12 border-l-2 border-gold pl-8">
-                    <p className="font-display text-2xl font-light italic leading-relaxed text-charcoal md:text-3xl">
+                  <blockquote className="my-12 border-l-2 border-text pl-8">
+                    <p className="font-sans text-2xl font-medium leading-relaxed text-text md:text-3xl">
                       {paragraph}
                     </p>
                   </blockquote>
                 ) : (
-                  <p className="mt-6 font-body text-base leading-[1.8] text-charcoal/80 first:mt-0">
+                  <p className="mt-6 font-sans text-base leading-[1.8] text-text/80 first:mt-0">
                     {paragraph}
                   </p>
                 )}
@@ -89,7 +89,7 @@ export default async function JournalArticlePage({ params }: PageProps) {
               <div className="mt-12 text-center">
                 <Link
                   href="/journal"
-                  className="font-body text-sm uppercase tracking-[0.15em] text-gold transition-colors hover:text-champagne"
+                  className="font-sans text-sm uppercase tracking-[0.15em] text-muted transition-colors hover:text-subtle"
                 >
                   &larr; Back to Journal
                 </Link>

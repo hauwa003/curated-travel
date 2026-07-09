@@ -18,7 +18,7 @@ function DayNumber({ day }: { day: number }) {
       initial={{ opacity: 0, y: 10 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, ease: easeSmooth }}
-      className="font-display text-3xl font-light text-gold/40"
+      className="font-sans text-3xl font-medium text-muted/40"
     >
       {display}
     </motion.span>
@@ -41,11 +41,11 @@ export default function TimelineProgress({ itinerary }: TimelineProgressProps) {
   return (
     <div ref={containerRef} className="relative mt-16">
       {/* Static background line */}
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-gold/20" />
+      <div className="absolute left-0 top-0 bottom-0 w-px bg-text/20" />
 
       {/* Animated gold progress line */}
       <motion.div
-        className="absolute left-0 top-0 w-px bg-gold"
+        className="absolute left-0 top-0 w-px bg-text"
         style={{ height: lineHeight }}
       />
 
@@ -57,10 +57,10 @@ export default function TimelineProgress({ itinerary }: TimelineProgressProps) {
                 <DayNumber day={day.day} />
               </div>
               <div className="flex-1">
-                <h3 className="font-display text-xl font-light text-charcoal">
+                <h3 className="font-sans text-xl font-medium text-text">
                   {day.title}
                 </h3>
-                <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
+                <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">
                   {day.description}
                 </p>
               </div>

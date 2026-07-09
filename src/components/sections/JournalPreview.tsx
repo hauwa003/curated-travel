@@ -16,7 +16,7 @@ export default function JournalPreview() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <ScrollReveal>
           <SectionLabel align="center">Journal</SectionLabel>
-          <h2 className="mt-4 text-center font-display text-4xl font-light text-charcoal md:text-5xl">
+          <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
             Stories & Insights
           </h2>
         </ScrollReveal>
@@ -26,7 +26,7 @@ export default function JournalPreview() {
             <ScrollReveal key={post.slug} delay={i * 0.15}>
               <Link href={`/journal/${post.slug}`} className="group block">
                 <motion.div
-                  whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(12, 27, 42, 0.12)" }}
+                  whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(0, 0, 0, 0.12)" }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
@@ -39,13 +39,13 @@ export default function JournalPreview() {
                     />
                   </div>
                   <div className="mt-5">
-                    <span className="font-body text-xs uppercase tracking-[0.15em] text-gold">
+                    <span className="font-sans text-xs uppercase tracking-[0.15em] text-muted">
                       {post.category}
                     </span>
-                    <h3 className="mt-2 font-display text-2xl font-light text-charcoal transition-colors group-hover:text-gold">
+                    <h3 className="mt-2 font-sans text-2xl font-medium text-text transition-colors group-hover:text-muted">
                       {post.title}
                     </h3>
-                    <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/60">
+                    <p className="mt-2 font-sans text-sm leading-relaxed text-text/60">
                       {post.excerpt}
                     </p>
                   </div>

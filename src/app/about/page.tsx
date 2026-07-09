@@ -56,18 +56,18 @@ export default function AboutPage() {
             <div className="mt-10">
               <TextReveal
                 text="Vela & Co. was born from a simple conviction: that the most meaningful journeys are those crafted with care, knowledge, and an unwavering commitment to excellence."
-                className="font-display text-2xl font-light leading-relaxed text-charcoal md:text-3xl"
+                className="font-sans text-2xl font-medium leading-relaxed text-text md:text-3xl"
               />
             </div>
             <ScrollReveal delay={0.3}>
-              <p className="mt-8 font-body text-base leading-relaxed text-charcoal/70">
+              <p className="mt-8 font-sans text-base leading-relaxed text-text/70">
                 Founded by Isabella Montague after two decades as a travel editor and Virtuoso advisor,
                 Vela & Co. represents the culmination of a lifetime spent discovering the world&apos;s most
                 extraordinary places and the people who bring them to life. We are a boutique advisory —
                 deliberately small, intentionally personal — because we believe that exceptional travel
                 demands exceptional attention.
               </p>
-              <p className="mt-6 font-body text-base leading-relaxed text-charcoal/70">
+              <p className="mt-6 font-sans text-base leading-relaxed text-text/70">
                 Our name, Vela, comes from the Latin for &ldquo;sail&rdquo; — a nod to the age of exploration
                 and the spirit of discovery that drives everything we do. Like the great navigators before us,
                 we chart courses to places that stir the soul.
@@ -77,11 +77,11 @@ export default function AboutPage() {
         </section>
 
         {/* Philosophy Pillars */}
-        <section className="bg-ivory py-24 md:py-32 lg:py-40">
+        <section className="bg-surface py-24 md:py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">Our Philosophy</SectionLabel>
-              <h2 className="mt-4 text-center font-display text-4xl font-light text-charcoal md:text-5xl">
+              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
                 What Guides Us
               </h2>
             </ScrollReveal>
@@ -89,11 +89,11 @@ export default function AboutPage() {
             <div className="mt-16 grid gap-12 md:grid-cols-2">
               {pillars.map((pillar, i) => (
                 <ScrollReveal key={pillar.title} delay={i * 0.1}>
-                  <div className="border-l border-gold/30 pl-6">
-                    <h3 className="font-display text-2xl font-light text-charcoal">
+                  <div className="border-l border-text/20 pl-6">
+                    <h3 className="font-sans text-2xl font-medium text-text">
                       {pillar.title}
                     </h3>
-                    <p className="mt-3 font-body text-sm leading-relaxed text-charcoal/60">
+                    <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
                       {pillar.description}
                     </p>
                   </div>
@@ -104,14 +104,14 @@ export default function AboutPage() {
         </section>
 
         {/* Credentials */}
-        <section className="bg-navy py-24 md:py-32 lg:py-40">
+        <section className="bg-dark py-24 md:py-32 lg:py-40">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <ScrollReveal>
               <SectionLabel align="center">Credentials</SectionLabel>
-              <h2 className="mt-4 font-display text-4xl font-light text-white md:text-5xl">
+              <h2 className="mt-4 font-sans text-4xl font-medium text-white md:text-5xl">
                 Trusted Worldwide
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl font-body text-base leading-relaxed text-white/60">
+              <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/60">
                 As proud members of the Virtuoso network — the world&apos;s leading luxury travel advisory
                 group — our clients benefit from exclusive rates, upgrades, and amenities at over 2,200
                 preferred properties worldwide.
@@ -122,8 +122,8 @@ export default function AboutPage() {
               {["Virtuoso Member", "Condé Nast Top Advisor", "Travel + Leisure A-List", "20+ Years Experience"].map(
                 (credential, i) => (
                   <ScrollReveal key={credential} delay={i * 0.1}>
-                    <div className="border-t border-gold/30 pt-4">
-                      <p className="font-body text-sm text-white/80">{credential}</p>
+                    <div className="border-t border-text/20 pt-4">
+                      <p className="font-sans text-sm text-white/80">{credential}</p>
                     </div>
                   </ScrollReveal>
                 )
@@ -137,7 +137,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">The Team</SectionLabel>
-              <h2 className="mt-4 text-center font-display text-4xl font-light text-charcoal md:text-5xl">
+              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
                 Your Advisors
               </h2>
             </ScrollReveal>
@@ -152,13 +152,13 @@ export default function AboutPage() {
                       aspectClass="aspect-[3/4] mx-auto max-w-xs"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <h3 className="mt-6 font-display text-2xl font-light text-charcoal">
+                    <h3 className="mt-6 font-sans text-2xl font-medium text-text">
                       {member.name}
                     </h3>
-                    <p className="mt-1 font-body text-xs uppercase tracking-[0.15em] text-gold">
+                    <p className="mt-1 font-sans text-xs uppercase tracking-[0.15em] text-muted">
                       {member.role}
                     </p>
-                    <p className="mt-3 font-body text-sm leading-relaxed text-charcoal/60">
+                    <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
                       {member.bio}
                     </p>
                   </div>

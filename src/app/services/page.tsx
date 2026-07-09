@@ -70,19 +70,19 @@ export default function ServicesPage() {
                   </div>
                   <div className="lg:w-1/2">
                     <SectionLabel>{`Service 0${i + 1}`}</SectionLabel>
-                    <h2 className="mt-4 font-display text-3xl font-light text-charcoal md:text-4xl">
+                    <h2 className="mt-4 font-sans text-3xl font-medium text-text md:text-4xl">
                       {service.title}
                     </h2>
-                    <p className="mt-4 font-body text-base leading-relaxed text-charcoal/70">
+                    <p className="mt-4 font-sans text-base leading-relaxed text-text/70">
                       {service.description}
                     </p>
                     <ul className="mt-6 space-y-2">
                       {service.features.map((feature) => (
                         <li
                           key={feature}
-                          className="flex items-center gap-3 font-body text-sm text-charcoal/60"
+                          className="flex items-center gap-3 font-sans text-sm text-text/60"
                         >
-                          <span className="h-px w-4 bg-gold" />
+                          <span className="h-px w-4 bg-text" />
                           {feature}
                         </li>
                       ))}
@@ -98,11 +98,11 @@ export default function ServicesPage() {
         </section>
 
         {/* How It Works */}
-        <section className="bg-ivory py-24 md:py-32 lg:py-40">
+        <section className="bg-surface py-24 md:py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <ScrollReveal>
               <SectionLabel align="center">The Process</SectionLabel>
-              <h2 className="mt-4 text-center font-display text-4xl font-light text-charcoal md:text-5xl">
+              <h2 className="mt-4 text-center font-sans text-4xl font-medium text-text md:text-5xl">
                 How It Works
               </h2>
             </ScrollReveal>
@@ -111,13 +111,13 @@ export default function ServicesPage() {
               {processSteps.map((step, i) => (
                 <ScrollReveal key={step.number} delay={i * 0.1}>
                   <div>
-                    <span className="font-display text-4xl font-light text-gold/40">
+                    <span className="font-sans text-4xl font-medium text-muted/40">
                       {step.number}
                     </span>
-                    <h3 className="mt-4 font-display text-xl font-light text-charcoal">
+                    <h3 className="mt-4 font-sans text-xl font-medium text-text">
                       {step.title}
                     </h3>
-                    <p className="mt-3 font-body text-sm leading-relaxed text-charcoal/60">
+                    <p className="mt-3 font-sans text-sm leading-relaxed text-text/60">
                       {step.description}
                     </p>
                   </div>

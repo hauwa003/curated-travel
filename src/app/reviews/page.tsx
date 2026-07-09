@@ -37,20 +37,20 @@ export default function ReviewsPage() {
                   }`}
                 >
                   <div className={`${i % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
-                    <div className="font-display text-5xl text-gold/30">
+                    <div className="font-sans text-5xl text-muted/30">
                       &ldquo;
                     </div>
-                    <blockquote className="mt-2 font-display text-xl font-light leading-relaxed text-charcoal md:text-2xl">
+                    <blockquote className="mt-2 font-sans text-xl font-medium leading-relaxed text-text md:text-2xl">
                       {testimonial.quote}
                     </blockquote>
                     <div className="mt-6">
-                      <p className="font-body text-sm uppercase tracking-[0.15em] text-gold">
+                      <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
                         {testimonial.author}
                       </p>
-                      <p className="mt-1 font-body text-sm text-charcoal/50">
+                      <p className="mt-1 font-sans text-sm text-text/50">
                         {testimonial.location}
                       </p>
-                      <p className="mt-1 font-body text-xs uppercase tracking-[0.1em] text-charcoal/40">
+                      <p className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-text/40">
                         {testimonial.trip}
                       </p>
                     </div>
@@ -68,13 +68,13 @@ export default function ReviewsPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-navy py-24 md:py-32">
+        <section className="bg-dark py-24 md:py-32">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <ScrollReveal>
-              <h2 className="font-display text-3xl font-light text-white md:text-4xl">
+              <h2 className="font-sans text-3xl font-medium text-white md:text-4xl">
                 Ready to Write Your Own Story?
               </h2>
-              <p className="mx-auto mt-4 max-w-lg font-body text-base text-white/60">
+              <p className="mx-auto mt-4 max-w-lg font-sans text-base text-white/60">
                 Let us craft a journey that you&apos;ll be sharing for years to come.
               </p>
               <div className="mt-8">

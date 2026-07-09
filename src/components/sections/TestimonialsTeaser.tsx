@@ -37,14 +37,14 @@ export default function TestimonialsTeaser() {
   const t = testimonials[current];
 
   return (
-    <section className="bg-navy py-24 md:py-32 lg:py-40">
+    <section className="bg-dark py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <ScrollReveal>
           <motion.div
             key={`quote-${current}`}
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="font-display text-6xl text-gold/30"
+            className="font-sans text-6xl text-muted/30"
           >
             &ldquo;
           </motion.div>
@@ -59,14 +59,14 @@ export default function TestimonialsTeaser() {
               exit={{ opacity: 0, filter: "blur(8px)" }}
               transition={{ duration: 0.6 }}
             >
-              <blockquote className="font-display text-xl font-light leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
+              <blockquote className="font-sans text-xl font-medium leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
                 {t.quote}
               </blockquote>
               <div className="mt-8">
-                <p className="font-body text-sm uppercase tracking-[0.15em] text-gold">
+                <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
                   {t.author}
                 </p>
-                <p className="mt-1 font-body text-sm text-white/50">
+                <p className="mt-1 font-sans text-sm text-white/50">
                   {t.trip}
                 </p>
               </div>
@@ -86,9 +86,9 @@ export default function TestimonialsTeaser() {
             >
               {i === current && (
                 <>
-                  <div className="absolute inset-0 rounded-full bg-gold/30" />
+                  <div className="absolute inset-0 rounded-full bg-muted/30" />
                   <motion.div
-                    className="absolute inset-0 origin-left rounded-full bg-gold"
+                    className="absolute inset-0 origin-left rounded-full bg-text"
                     style={{ scaleX: progress }}
                   />
                 </>
