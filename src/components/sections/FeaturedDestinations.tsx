@@ -27,7 +27,6 @@ export default function FeaturedDestinations() {
             <ScrollReveal
               key={dest.slug}
               delay={i * 0.1}
-              className={i === 0 ? "md:col-span-2 lg:col-span-2 lg:row-span-2" : ""}
             >
               <Link href={`/destinations#${dest.slug}`} className="group relative block">
                 <motion.div
@@ -35,20 +34,20 @@ export default function FeaturedDestinations() {
                   transition={{ duration: 0.3 }}
                   className="relative overflow-hidden"
                 >
-                  <div className={`relative ${i === 0 ? "aspect-[4/3] lg:aspect-auto lg:h-full min-h-[400px]" : "aspect-[3/4]"}`}>
+                  <div className="relative aspect-[3/4]">
                     <Image
                       src={dest.image}
                       alt={dest.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      sizes={i === 0 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 transition-transform duration-300 group-hover:-translate-y-2 md:p-8">
                       <span className="font-sans text-xs uppercase tracking-[0.2em] text-white/70">
                         {dest.region}
                       </span>
-                      <h3 className={`mt-2 font-heading font-medium text-white ${i === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+                      <h3 className="mt-2 font-heading text-2xl font-medium text-white">
                         {dest.name}
                       </h3>
                       <p className="mt-2 max-w-md font-sans text-sm text-white/70">
