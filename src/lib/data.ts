@@ -53,6 +53,7 @@ export const destinations: Destination[] = [
     tagline: "A Sensory Tapestry",
     description: "Behind unassuming doors lie palatial riads with mosaic courtyards, rooftop terraces overlooking the Atlas Mountains, and souks that tell stories in saffron and silk.",
     image: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&q=80",
+    featured: true,
   },
   {
     slug: "new-zealand",
