@@ -6,6 +6,7 @@ import FeaturedDestinations from "@/components/sections/FeaturedDestinations";
 import TestimonialsTeaser from "@/components/sections/TestimonialsTeaser";
 import JournalPreview from "@/components/sections/JournalPreview";
 import CtaSection from "@/components/sections/CtaSection";
+import InstagramMarquee from "@/components/sections/InstagramMarquee";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <TestimonialsTeaser />
       <JournalPreview />
       <CtaSection />
+      <InstagramMarquee />
       <Footer />
     </>
   );
