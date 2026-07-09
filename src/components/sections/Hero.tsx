@@ -33,7 +33,7 @@ export default function Hero() {
         initial={{ opacity: 0.7 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: easeSmooth }}
-        className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/20 to-dark/60"
+        className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/50 to-dark/70"
       />
 
       {/* Content */}
