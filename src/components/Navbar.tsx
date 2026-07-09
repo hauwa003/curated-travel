@@ -2,16 +2,17 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { easeSmooth } from "@/lib/animations";
 
 const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/destinations", label: "Destinations" },
-  { href: "/journal", label: "Journal" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About", image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=400&q=80" },
+  { href: "/services", label: "Services", image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80" },
+  { href: "/destinations", label: "Destinations", image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80" },
+  { href: "/journal", label: "Journal", image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&q=80" },
+  { href: "/reviews", label: "Reviews", image: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&q=80" },
+  { href: "/contact", label: "Contact", image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&q=80" },
 ];
 
 interface NavbarProps {
@@ -22,7 +23,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const isLight = transparent && !scrolled && !mobileOpen;
+  const isLight = mobileOpen || (transparent && !scrolled);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -43,9 +44,11 @@ export default function Navbar({ transparent = false }: NavbarProps) {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow] duration-300 ${
-          scrolled
-            ? "bg-bg/95 backdrop-blur-sm shadow-sm"
-            : "bg-transparent"
+          mobileOpen
+            ? "bg-transparent"
+            : scrolled
+              ? "bg-bg/95 backdrop-blur-sm shadow-sm"
+              : "bg-transparent"
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
@@ -101,23 +104,34 @@ export default function Navbar({ transparent = false }: NavbarProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.3 } }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-bg"
+            className="fixed inset-0 z-40 flex flex-col justify-center bg-dark"
           >
-            <nav className="flex flex-col items-center gap-8">
+            <nav className="flex flex-col gap-1 px-6">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: 10, transition: { duration: 0.15 } }}
+                  initial={{ opacity: 0, x: -20, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, x: -10, transition: { duration: 0.15 } }}
                   transition={{ delay: i * 0.05 + 0.1, duration: 0.4, ease: easeSmooth }}
                 >
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-heading text-3xl font-medium text-text transition-colors hover:text-muted"
+                    className="group flex items-center gap-4 py-3"
                   >
-                    {link.label}
+                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm">
+                      <Image
+                        src={link.image}
+                        alt={link.label}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                        sizes="48px"
+                      />
+                    </div>
+                    <span className="font-heading text-2xl font-medium text-white transition-colors group-hover:text-white/70">
+                      {link.label}
+                    </span>
                   </Link>
                 </motion.div>
               ))}
