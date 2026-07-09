@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import { testimonials } from "@/lib/data";
@@ -21,7 +22,6 @@ export default function TestimonialsTeaser() {
     return () => clearInterval(timer);
   }, [advance]);
 
-  // Progress animation — updates every 50ms
   useEffect(() => {
     setProgress(0);
     const step = 50;
@@ -40,17 +40,13 @@ export default function TestimonialsTeaser() {
     <section className="bg-dark py-24 md:py-32 lg:py-40">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <ScrollReveal>
-          <motion.div
-            key={`quote-${current}`}
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="font-heading text-6xl text-muted/30"
-          >
+          <div className="font-heading text-6xl text-muted/30">
             &ldquo;
-          </motion.div>
+          </div>
         </ScrollReveal>
 
-        <div className="relative min-h-[200px]">
+        {/* Fixed-height container — no jumping */}
+        <div className="relative h-[320px] md:h-[280px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -58,24 +54,38 @@ export default function TestimonialsTeaser() {
               animate={{ opacity: 1, filter: "blur(0px)" }}
               exit={{ opacity: 0, filter: "blur(8px)" }}
               transition={{ duration: 0.6 }}
+              className="absolute inset-0 flex flex-col items-center justify-start"
             >
               <blockquote className="font-heading text-xl font-medium leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
                 {t.quote}
               </blockquote>
-              <div className="mt-8">
-                <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
-                  {t.author}
-                </p>
-                <p className="mt-1 font-sans text-sm text-white/50">
-                  {t.trip}
-                </p>
+              <div className="mt-8 flex items-center gap-4">
+                {t.image && (
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src={t.image}
+                      alt={t.author}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  </div>
+                )}
+                <div className="text-left">
+                  <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
+                    {t.author}
+                  </p>
+                  <p className="mt-0.5 font-sans text-sm text-white/50">
+                    {t.trip}
+                  </p>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
         {/* Progress Dots */}
-        <div className="mt-10 flex justify-center gap-2">
+        <div className="mt-6 flex justify-center gap-2">
           {testimonials.map((_, i) => (
             <button
               key={i}

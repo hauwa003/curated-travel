@@ -112,6 +112,7 @@ export const testimonials: Testimonial[] = [
     author: "Charlotte & James Hartley",
     location: "London, UK",
     trip: "Italian Honeymoon — 14 Days",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
   },
   {
     id: "2",
@@ -119,6 +120,7 @@ export const testimonials: Testimonial[] = [
     author: "Dr. Michael Chen",
     location: "San Francisco, USA",
     trip: "Southeast Asia — 21 Days",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
   },
   {
     id: "3",
@@ -126,6 +128,7 @@ export const testimonials: Testimonial[] = [
     author: "Amara Osei-Bonsu",
     location: "Toronto, Canada",
     trip: "France Multi-Generational — 18 Days",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80",
   },
   {
     id: "4",
@@ -133,6 +136,7 @@ export const testimonials: Testimonial[] = [
     author: "Elizabeth Waverly",
     location: "New York, USA",
     trip: "Art & Culture of Italy — 12 Days",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
   },
   {
     id: "5",
@@ -140,6 +144,7 @@ export const testimonials: Testimonial[] = [
     author: "Henrik & Sofia Lindström",
     location: "Stockholm, Sweden",
     trip: "New Zealand Expedition — 16 Days",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
   },
 ];
 
