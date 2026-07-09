@@ -66,9 +66,9 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.5, ease: easeExpo }}
           className="mt-6 max-w-4xl font-heading text-4xl font-medium text-white md:text-5xl lg:text-6xl"
         >
-          Travel as It Was
+          Experience Travel
           <br />
-          Meant to Be
+          as It Was Meant to Be
         </motion.h1>
 
         <motion.p
