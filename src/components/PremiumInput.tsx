@@ -25,13 +25,13 @@ export default function PremiumInput({
   const isActive = focused || value.length > 0;
 
   const baseInputClass =
-    "peer w-full border-0 border-b border-text/15 bg-transparent pt-5 pb-2 font-sans text-base text-text transition-all duration-300 focus:border-transparent focus:bg-text/[0.03]";
+    "peer w-full border-0 border-b border-text/15 bg-transparent pt-5 pb-2 font-sans text-base text-text transition-[border-color,background-color] duration-200 focus:border-transparent focus:bg-text/[0.03]";
 
   return (
     <div className="input-underline relative">
       {/* Floating label */}
       <label
-        className={`pointer-events-none absolute left-0 font-sans uppercase tracking-[0.15em] transition-all duration-300 ${
+        className={`pointer-events-none absolute left-0 font-sans uppercase tracking-[0.15em] transition-[top,font-size,color] duration-200 ${
           isActive
             ? "top-0 text-[10px] text-muted"
             : "top-5 text-xs text-text/50"

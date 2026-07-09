@@ -51,9 +51,8 @@ export default function TestimonialsTeaser() {
             <motion.div
               key={current}
               initial={{ opacity: 0, filter: "blur(8px)" }}
-              animate={{ opacity: 1, filter: "blur(0px)" }}
-              exit={{ opacity: 0, filter: "blur(8px)" }}
-              transition={{ duration: 0.6 }}
+              animate={{ opacity: 1, filter: "blur(0px)", transition: { duration: 0.6 } }}
+              exit={{ opacity: 0, filter: "blur(8px)", transition: { duration: 0.3 } }}
               className="absolute inset-0 flex flex-col items-center justify-start"
             >
               <blockquote className="font-heading text-xl font-medium leading-relaxed text-white/90 md:text-2xl lg:text-3xl">
@@ -75,7 +74,7 @@ export default function TestimonialsTeaser() {
                   <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
                     {t.author}
                   </p>
-                  <p className="mt-0.5 font-sans text-sm text-white/50">
+                  <p className="mt-0.5 font-sans text-sm text-white/70">
                     {t.trip}
                   </p>
                 </div>
@@ -90,7 +89,7 @@ export default function TestimonialsTeaser() {
             <button
               key={i}
               onClick={() => { setCurrent(i); setProgress(0); }}
-              className="relative h-1.5 overflow-hidden rounded-full transition-all duration-300"
+              className="relative h-1.5 overflow-hidden rounded-full transition-[width,background-color] duration-300"
               style={{ width: i === current ? 32 : 6, backgroundColor: i === current ? "transparent" : "rgba(255,255,255,0.2)" }}
               aria-label={`Go to testimonial ${i + 1}`}
             >

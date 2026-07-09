@@ -92,7 +92,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-12">
-          <p className="font-sans text-xs text-white/40">
+          <p className="font-sans text-xs text-white/60">
             &copy; {new Date().getFullYear()} Vela & Co. All rights reserved.
           </p>
           <div className="flex gap-6">
@@ -100,7 +100,7 @@ export default function Footer() {
               <a
                 key={social}
                 href="#"
-                className="font-sans text-xs uppercase tracking-[0.1em] text-white/40 transition-colors hover:text-muted"
+                className="font-sans text-xs uppercase tracking-[0.1em] text-white/60 transition-colors hover:text-muted"
               >
                 {social}
               </a>

@@ -14,7 +14,7 @@ export default function Divider({ className = "", width = "w-16" }: DividerProps
       initial={{ scaleX: 0, opacity: 0 }}
       whileInView={{ scaleX: 1, opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.8, ease: easeExpo }}
+      transition={{ duration: 0.6, ease: easeExpo }}
       style={{ originX: 0.5 }}
       className={`h-px bg-text/20 ${width} ${className}`}
     />

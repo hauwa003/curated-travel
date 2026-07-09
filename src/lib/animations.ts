@@ -1,12 +1,13 @@
-export const easeSmooth: [number, number, number, number] = [0.22, 1, 0.36, 1];
+// Strong ease-out for UI interactions (Emil Kowalski recommended)
+export const easeSmooth: [number, number, number, number] = [0.23, 1, 0.32, 1];
 export const easeExpo: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: easeSmooth },
+    transition: { duration: 0.5, ease: easeSmooth },
   },
 };
 
@@ -14,14 +15,14 @@ export const fadeIn = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.6, ease: easeSmooth },
+    transition: { duration: 0.4, ease: easeSmooth },
   },
 };
 
 export const stagger = {
   visible: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.06,
     },
   },
 };
@@ -31,16 +32,16 @@ export const scaleReveal = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.7, ease: easeExpo },
+    transition: { duration: 0.5, ease: easeExpo },
   },
 };
 
 export const slideIn = (direction: "left" | "right" = "left") => ({
-  hidden: { opacity: 0, x: direction === "left" ? -40 : 40 },
+  hidden: { opacity: 0, x: direction === "left" ? -30 : 30 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: easeSmooth },
+    transition: { duration: 0.5, ease: easeSmooth },
   },
 });
 
@@ -51,7 +52,7 @@ export const maskReveal = {
   visible: {
     clipPath: "inset(0% 0 0 0)",
     opacity: 1,
-    transition: { duration: 1, ease: easeExpo },
+    transition: { duration: 0.8, ease: easeExpo },
   },
 };
 
@@ -60,7 +61,7 @@ export const blurIn = {
   visible: {
     opacity: 1,
     filter: "blur(0px)",
-    transition: { duration: 1, ease: easeSmooth },
+    transition: { duration: 0.8, ease: easeSmooth },
   },
 };
 
@@ -69,14 +70,14 @@ export const lineDraw = {
   visible: {
     scaleX: 1,
     opacity: 1,
-    transition: { duration: 0.8, ease: easeExpo },
+    transition: { duration: 0.6, ease: easeExpo },
   },
 };
 
 export const staggerCascade = {
   visible: {
     transition: {
-      staggerChildren: 0.08,
+      staggerChildren: 0.05,
     },
   },
 };

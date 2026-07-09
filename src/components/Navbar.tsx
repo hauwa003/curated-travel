@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow] duration-300 ${
           scrolled
             ? "bg-bg/95 backdrop-blur-sm shadow-sm"
             : "bg-transparent"
@@ -62,7 +62,7 @@ export default function Navbar() {
               >
                 {link.label}
                 <span
-                  className="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-text transition-all duration-300 group-hover:w-full"
+                  className="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-text transition-[width] duration-200 group-hover:w-full"
                   style={{ transformOrigin: "center" }}
                 />
               </Link>
@@ -96,9 +96,8 @@ export default function Navbar() {
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            animate={{ opacity: 1, transition: { duration: 0.3 } }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
             className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-bg"
           >
             <nav className="flex flex-col items-center gap-8">
@@ -107,7 +106,7 @@ export default function Navbar() {
                   key={link.href}
                   initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: 10 }}
+                  exit={{ opacity: 0, y: 10, transition: { duration: 0.15 } }}
                   transition={{ delay: i * 0.05 + 0.1, duration: 0.4, ease: easeSmooth }}
                 >
                   <Link
