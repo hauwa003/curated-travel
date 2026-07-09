@@ -25,10 +25,7 @@ export default function JournalPreview() {
           {posts.map((post, i) => (
             <ScrollReveal key={post.slug} delay={i * 0.07}>
               <Link href={`/journal/${post.slug}`} className="group block">
-                <motion.div
-                  whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(0, 0, 0, 0.12)" }}
-                  transition={{ duration: 0.3 }}
-                >
+                <div>
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
                       src={post.image}
@@ -49,7 +46,7 @@ export default function JournalPreview() {
                       {post.excerpt}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               </Link>
             </ScrollReveal>
           ))}
