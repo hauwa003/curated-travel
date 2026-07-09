@@ -85,12 +85,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.1, ease: easeExpo }}
-          className="mt-10 flex gap-4"
+          className="mt-10 flex w-full max-w-xl flex-col gap-4 px-6 sm:w-auto sm:max-w-none sm:flex-row sm:px-0"
         >
-          <Button href="/destinations" variant="primary">
+          <Button href="/destinations" variant="primary" className="w-full sm:w-auto">
             Explore Destinations
           </Button>
-          <Button href="/contact" variant="secondary" className="border-white/60 text-white hover:border-white hover:bg-white hover:text-text">
+          <Button href="/contact" variant="secondary" className="w-full border-white/60 text-white hover:border-white hover:bg-white hover:text-text sm:w-auto">
             Begin Your Journey
           </Button>
         </motion.div>
