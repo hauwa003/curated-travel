@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function ReviewsPage() {
   return (
     <>
-      <Navbar />
+      <Navbar transparent />
       <PageWrapper>
         <SubPageHero
           image="https://images.unsplash.com/photo-1502784444-fa2c2f4148ac?w=1920&q=80"

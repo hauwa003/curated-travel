@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface PageWrapperProps {
@@ -8,6 +9,10 @@ interface PageWrapperProps {
 }
 
 export default function PageWrapper({ children, className = "" }: PageWrapperProps) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
