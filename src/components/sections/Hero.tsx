@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Button from "@/components/Button";
 import { easeExpo, easeSmooth } from "@/lib/animations";
 
@@ -10,20 +9,23 @@ const taglineChars = "Journeys, Crafted".split("");
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image — Ken Burns slow zoom */}
+      {/* Background Video — Ken Burns slow zoom */}
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: 1.08 }}
         transition={{ duration: 20, ease: "linear" }}
         className="absolute inset-0"
       >
-        <Image
-          src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80"
-          alt="Luxury coastal destination"
-          fill
-          className="object-cover"
-          priority
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/hero-poster.jpg"
+          className="h-full w-full object-cover"
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
       </motion.div>
 
       {/* Gradient Overlay — fade in */}
