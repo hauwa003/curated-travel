@@ -99,3 +99,17 @@ input:focus, textarea:focus, select:focus {
   width: 100%;
   left: 0;
 }
+
+/* Instagram marquee */
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
