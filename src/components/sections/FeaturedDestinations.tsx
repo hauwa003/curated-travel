@@ -28,7 +28,7 @@ export default function FeaturedDestinations() {
               key={dest.slug}
               delay={i * 0.1}
             >
-              <Link href={`/destinations#${dest.slug}`} className="group relative block">
+              <Link href={`/destinations/${dest.slug}`} className="group relative block">
                 <motion.div
                   whileHover={{ y: -6, boxShadow: "0 16px 50px rgba(0, 0, 0, 0.16)" }}
                   transition={{ duration: 0.3 }}

@@ -69,7 +69,7 @@ export const destinations: Destination[] = [
     region: "Central America",
     tagline: "Pura Vida in Luxury",
     description: "Cloud forests alive with toucans and orchids, volcanic hot springs nestled in the jungle, and eco-lodges where sustainability meets five-star comfort.",
-    image: "https://images.unsplash.com/photo-1518259102261-b57b7f63aa5a?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1200&q=80",
   },
   {
     slug: "iceland",
