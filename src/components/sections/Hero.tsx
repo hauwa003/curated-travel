@@ -9,7 +9,7 @@ const taglineChars = "Journeys, Crafted".split("");
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Video — Ken Burns slow zoom */}
+      {/* Background Video  - Ken Burns slow zoom */}
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: 1.08 }}
@@ -28,7 +28,7 @@ export default function Hero() {
         </video>
       </motion.div>
 
-      {/* Gradient Overlay — fade in */}
+      {/* Gradient Overlay  - fade in */}
       <motion.div
         initial={{ opacity: 0.7 }}
         animate={{ opacity: 1 }}
@@ -38,7 +38,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
-        {/* Tagline — character-level reveal */}
+        {/* Tagline  - character-level reveal */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -59,7 +59,7 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Headline — blur-to-focus */}
+        {/* Headline  - blur-to-focus */}
         <motion.h1
           initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}

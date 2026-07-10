@@ -7,7 +7,7 @@ import JournalGrid from "@/components/sections/JournalGrid";
 
 export const metadata: Metadata = {
   title: "Journal",
-  description: "Stories, insights, and inspiration from the world of luxury travel — by the advisors at Vela & Co.",
+  description: "Stories, insights, and inspiration from the world of luxury travel  - by the advisors at Vela & Co.",
 };
 
 export default function JournalPage() {

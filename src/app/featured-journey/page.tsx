@@ -11,8 +11,8 @@ import TimelineProgress from "./TimelineProgress";
 import { featuredJourney } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Featured Journey — The Italian Riviera",
-  description: "A 14-day journey from the Amalfi Coast to Sicily — experience Southern Italy's soul with Vela & Co.",
+  title: "Featured Journey  - The Italian Riviera",
+  description: "A 14-day journey from the Amalfi Coast to Sicily  - experience Southern Italy's soul with Vela & Co.",
 };
 
 export default function FeaturedJourneyPage() {

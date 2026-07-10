@@ -9,7 +9,7 @@ import SubPageHero from "@/components/SubPageHero";
 
 export const metadata: Metadata = {
   title: "Reviews",
-  description: "Hear from travellers who have experienced the Vela & Co. difference — in their own words.",
+  description: "Hear from travellers who have experienced the Vela & Co. difference  - in their own words.",
 };
 
 export default function ReviewsPage() {

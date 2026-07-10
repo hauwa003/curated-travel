@@ -12,19 +12,19 @@ import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "From bespoke itineraries to private experiences — discover how Vela & Co. crafts extraordinary luxury travel.",
+  description: "From bespoke itineraries to private experiences  - discover how Vela & Co. crafts extraordinary luxury travel.",
 };
 
 const processSteps = [
   {
     number: "01",
     title: "The Conversation",
-    description: "Every journey begins with listening. We learn about your travel style, passions, and dreams — the details that transform a trip into an experience.",
+    description: "Every journey begins with listening. We learn about your travel style, passions, and dreams  - the details that transform a trip into an experience.",
   },
   {
     number: "02",
     title: "The Design",
-    description: "Your advisor crafts a detailed, day-by-day itinerary — a narrative of experiences, accommodations, and moments designed specifically for you.",
+    description: "Your advisor crafts a detailed, day-by-day itinerary  - a narrative of experiences, accommodations, and moments designed specifically for you.",
   },
   {
     number: "03",
@@ -34,7 +34,7 @@ const processSteps = [
   {
     number: "04",
     title: "The Journey",
-    description: "With everything arranged and confirmed, you travel with complete peace of mind — and our 24/7 support just a message away.",
+    description: "With everything arranged and confirmed, you travel with complete peace of mind  - and our 24/7 support just a message away.",
   },
 ];
 

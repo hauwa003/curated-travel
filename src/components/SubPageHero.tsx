@@ -42,7 +42,7 @@ export default function SubPageHero({
         />
       </motion.div>
 
-      {/* Overlay — fades in with delay */}
+      {/* Overlay  - fades in with delay */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

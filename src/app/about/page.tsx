@@ -13,7 +13,7 @@ import { teamMembers } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "The story behind Vela & Co. — a boutique luxury travel advisory founded on the belief that travel is a transformative art.",
+  description: "The story behind Vela & Co.  - a boutique luxury travel advisory founded on the belief that travel is a transformative art.",
 };
 
 const pillars = [
@@ -31,7 +31,7 @@ const pillars = [
   },
   {
     title: "Present, Not Intrusive",
-    description: "Our support is seamless and anticipatory. We're there when you need us, invisible when you don't — ensuring your journey unfolds effortlessly.",
+    description: "Our support is seamless and anticipatory. We're there when you need us, invisible when you don't  - ensuring your journey unfolds effortlessly.",
   },
 ];
 
@@ -63,12 +63,12 @@ export default function AboutPage() {
               <p className="mt-8 font-sans text-base leading-relaxed text-text/70">
                 Founded by Isabella Montague after two decades as a travel editor and Virtuoso advisor,
                 Vela & Co. represents the culmination of a lifetime spent discovering the world&apos;s most
-                extraordinary places and the people who bring them to life. We are a boutique advisory —
-                deliberately small, intentionally personal — because we believe that exceptional travel
+                extraordinary places and the people who bring them to life. We are a boutique advisory  -
+                deliberately small, intentionally personal  - because we believe that exceptional travel
                 demands exceptional attention.
               </p>
               <p className="mt-6 font-sans text-base leading-relaxed text-text/70">
-                Our name, Vela, comes from the Latin for &ldquo;sail&rdquo; — a nod to the age of exploration
+                Our name, Vela, comes from the Latin for &ldquo;sail&rdquo;  - a nod to the age of exploration
                 and the spirit of discovery that drives everything we do. Like the great navigators before us,
                 we chart courses to places that stir the soul.
               </p>
@@ -112,8 +112,8 @@ export default function AboutPage() {
                 Trusted Worldwide
               </h2>
               <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/80">
-                As proud members of the Virtuoso network — the world&apos;s leading luxury travel advisory
-                group — our clients benefit from exclusive rates, upgrades, and amenities at over 2,200
+                As proud members of the Virtuoso network  - the world&apos;s leading luxury travel advisory
+                group  - our clients benefit from exclusive rates, upgrades, and amenities at over 2,200
                 preferred properties worldwide.
               </p>
             </ScrollReveal>
