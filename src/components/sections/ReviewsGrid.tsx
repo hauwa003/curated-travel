@@ -16,7 +16,7 @@ export default function ReviewsGrid() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={stagger}
-          className="columns-1 gap-8 md:columns-2"
+          className="columns-1 gap-8 md:columns-2 lg:columns-3"
         >
           {testimonials.map((testimonial, i) => (
             <ScrollReveal
