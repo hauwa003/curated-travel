@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import Divider from "@/components/Divider";
@@ -38,30 +37,14 @@ export default function ReviewsGrid() {
                 {/* Divider */}
                 <Divider className="mt-6" width="w-12" />
 
-                {/* Author row */}
-                <div className="mt-6 flex items-center gap-4">
-                  {testimonial.image && (
-                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        fill
-                        className="object-cover"
-                        sizes="48px"
-                      />
-                    </div>
-                  )}
-                  <div>
-                    <p className="font-sans text-sm uppercase tracking-[0.15em] text-text">
-                      {testimonial.author}
-                    </p>
-                    <p className="mt-0.5 font-sans text-sm text-text/60">
-                      {testimonial.location}
-                    </p>
-                    <p className="mt-0.5 font-sans text-xs uppercase tracking-[0.1em] text-muted">
-                      {testimonial.trip}
-                    </p>
-                  </div>
+                {/* Author */}
+                <div className="mt-6">
+                  <p className="font-sans text-sm uppercase tracking-[0.15em] text-text">
+                    {testimonial.author}
+                  </p>
+                  <p className="mt-0.5 font-sans text-sm text-text/60">
+                    {testimonial.location}
+                  </p>
                 </div>
               </div>
             </ScrollReveal>

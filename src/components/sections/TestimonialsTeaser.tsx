@@ -45,7 +45,7 @@ export default function TestimonialsTeaser() {
           </div>
         </ScrollReveal>
 
-        {/* Fixed-height container — no jumping */}
+        {/* Fixed-height container  - no jumping */}
         <div className="relative h-[320px] md:h-[280px]">
           <AnimatePresence mode="wait">
             <motion.div

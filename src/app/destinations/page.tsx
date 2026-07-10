@@ -8,7 +8,7 @@ import DestinationsGrid from "./DestinationsGrid";
 
 export const metadata: Metadata = {
   title: "Destinations",
-  description: "Explore our curated collection of the world's most extraordinary destinations — from the Amalfi Coast to Kyoto, Patagonia to the Maldives.",
+  description: "Explore our curated collection of the world's most extraordinary destinations  - from the Amalfi Coast to Kyoto, Patagonia to the Maldives.",
 };
 
 export default function DestinationsPage() {
@@ -21,7 +21,7 @@ export default function DestinationsPage() {
           alt="Aerial view of coastline"
           label="Explore"
           title="Our Destinations"
-          subtitle="Each destination has been personally vetted by our advisors — because we only recommend places we've experienced ourselves."
+          subtitle="Each destination has been personally vetted by our advisors  - because we only recommend places we've experienced ourselves."
         />
 
         {/* Destinations Grid */}

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const dest = destinations.find((d) => d.slug === slug);
   if (!dest) return {};
   return {
-    title: `${dest.name} — ${dest.tagline}`,
+    title: `${dest.name}  - ${dest.tagline}`,
     description: dest.description,
   };
 }
@@ -123,7 +123,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Destination Image — full bleed */}
+        {/* Destination Image  - full bleed */}
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-5xl px-6">
             <ScrollReveal>

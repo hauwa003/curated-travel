@@ -11,7 +11,7 @@ export default function BrandStatement() {
         </ScrollReveal>
         <div className="mt-10">
           <TextReveal
-            text="We believe that extraordinary travel is not about the places you visit, but the way they make you feel — the quiet moments of wonder, the connections forged, the stories you carry home."
+            text="We believe that extraordinary travel is not about the places you visit, but the way they make you feel  - the quiet moments of wonder, the connections forged, the stories you carry home."
             className="font-heading text-2xl font-medium leading-relaxed text-text md:text-3xl lg:text-4xl"
           />
         </div>

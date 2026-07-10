@@ -9,12 +9,9 @@ import { journalPosts } from "@/lib/data";
 
 const categories = ["All", ...Array.from(new Set(journalPosts.map((p) => p.category)))];
 
-type SortOption = "newest" | "oldest";
-
 export default function JournalGrid() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
-  const [sort, setSort] = useState<SortOption>("newest");
 
   const filtered = useMemo(() => {
     let posts = journalPosts;
@@ -36,15 +33,8 @@ export default function JournalGrid() {
       posts = posts.filter((p) => p.category === activeCategory);
     }
 
-    // Sort
-    posts = [...posts].sort((a, b) => {
-      const da = new Date(a.date).getTime();
-      const db = new Date(b.date).getTime();
-      return sort === "newest" ? db - da : da - db;
-    });
-
     return posts;
-  }, [search, activeCategory, sort]);
+  }, [search, activeCategory]);
 
   const [featured, ...rest] = filtered;
 
@@ -77,34 +67,21 @@ export default function JournalGrid() {
             />
           </div>
 
-          {/* Filters & Sort row */}
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            {/* Category filters */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-1.5 font-sans text-xs uppercase tracking-[0.12em] transition-colors duration-200 ${
-                    activeCategory === cat
-                      ? "bg-text text-white"
-                      : "bg-surface text-muted hover:bg-text/10"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-
-            {/* Sort */}
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value as SortOption)}
-              className="border border-text/20 bg-transparent px-4 py-2 font-sans text-xs uppercase tracking-[0.12em] text-muted transition-colors duration-200 focus:border-text/40 focus:outline-none"
-            >
-              <option value="newest">Newest First</option>
-              <option value="oldest">Oldest First</option>
-            </select>
+          {/* Category filters */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-1.5 font-sans text-xs uppercase tracking-[0.12em] transition-colors duration-200 ${
+                  activeCategory === cat
+                    ? "bg-text text-white"
+                    : "bg-surface text-muted hover:bg-text/10"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
 

@@ -18,7 +18,7 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: {
-    default: "Vela & Co. — Journeys, Crafted.",
+    default: "Vela & Co.  - Journeys, Crafted.",
     template: "%s | Vela & Co.",
   },
   description:
