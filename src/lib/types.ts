@@ -5,6 +5,7 @@ export interface Destination {
   tagline: string;
   description: string;
   image: string;
+  video?: string;
   featured?: boolean;
   duration: string;
   startingPrice: string;
