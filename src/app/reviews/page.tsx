@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
+import ReviewsGrid from "@/components/sections/ReviewsGrid";
 import ScrollReveal from "@/components/ScrollReveal";
-import Divider from "@/components/Divider";
 import Button from "@/components/Button";
 import SubPageHero from "@/components/SubPageHero";
-import { testimonials } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Reviews",
@@ -26,46 +25,8 @@ export default function ReviewsPage() {
           subtitle="The stories our clients share are the truest measure of what we do."
         />
 
-        {/* Reviews */}
-        <section className="py-24 md:py-32 lg:py-40">
-          <div className="mx-auto max-w-5xl px-6 lg:px-12">
-            {testimonials.map((testimonial, i) => (
-              <ScrollReveal key={testimonial.id}>
-                <div
-                  className={`${i > 0 ? "mt-20" : ""} ${
-                    i % 2 === 0 ? "" : "md:text-right"
-                  }`}
-                >
-                  <div className={`${i % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
-                    <div className="font-heading text-5xl text-muted/30">
-                      &ldquo;
-                    </div>
-                    <blockquote className="mt-2 font-heading text-xl font-medium leading-relaxed text-text md:text-2xl">
-                      {testimonial.quote}
-                    </blockquote>
-                    <div className="mt-6">
-                      <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
-                        {testimonial.author}
-                      </p>
-                      <p className="mt-1 font-sans text-sm text-text/70">
-                        {testimonial.location}
-                      </p>
-                      <p className="mt-1 font-sans text-xs uppercase tracking-[0.1em] text-muted">
-                        {testimonial.trip}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                {i < testimonials.length - 1 && (
-                  <Divider
-                    className={`mt-20 ${i % 2 === 0 ? "" : "ml-auto"}`}
-                    width="w-24"
-                  />
-                )}
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
+        {/* Reviews Grid */}
+        <ReviewsGrid />
 
         {/* CTA */}
         <section className="bg-dark py-24 md:py-32">
