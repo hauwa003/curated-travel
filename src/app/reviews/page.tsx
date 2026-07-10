@@ -18,7 +18,7 @@ export default function ReviewsPage() {
       <Navbar transparent />
       <PageWrapper>
         <SubPageHero
-          image="https://images.unsplash.com/photo-1502784444-fa2c2f4148ac?w=1920&q=80"
+          image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80"
           alt="Beautiful sunset"
           label="Testimonials"
           title="Guest Reviews"
