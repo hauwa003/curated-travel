@@ -21,7 +21,7 @@ export default function CtaSection() {
   return (
     <section ref={sectionRef} className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
       <ParallaxImage
-        src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1920&q=80"
+        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80"
         alt="Luxury travel destination"
         className="absolute inset-0 h-full w-full"
         speed={0.1}
