@@ -91,8 +91,7 @@ const budgetRanges = [
   "Flexible",
 ];
 
-const heroImage =
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80";
+const heroVideo = "/contact-hero.mp4";
 
 /* ─── Modal Content ─── */
 function ContactModalContent({ onClose }: { onClose: () => void }) {
@@ -164,15 +163,17 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
           </svg>
         </button>
 
-        {/* Hero image */}
+        {/* Hero video */}
         <div className="relative h-48 shrink-0 overflow-hidden md:h-56">
-          <Image
-            src={heroImage}
-            alt="Luxury travel"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 672px"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-dark/20 via-transparent to-dark/40" />
         </div>
 
