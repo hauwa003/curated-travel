@@ -20,7 +20,7 @@ export const destinations: Destination[] = [
     tagline: "Temples, Tea & Timelessness",
     description: "Ancient temples shrouded in morning mist, private tea ceremonies in hidden gardens, and the gentle rustle of bamboo groves  - Kyoto reveals itself slowly to those who linger.",
     image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
-    video: "/contact-hero.mp4",
+    video: "/kyoto-hero.mp4",
     featured: true,
     duration: "10 Nights",
     startingPrice: "From £6,800 per person",
