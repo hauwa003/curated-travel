@@ -36,11 +36,14 @@ export function ContactModalProvider({
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      globalThis.lenis?.stop();
     } else {
       document.body.style.overflow = "";
+      globalThis.lenis?.start();
     }
     return () => {
       document.body.style.overflow = "";
+      globalThis.lenis?.start();
     };
   }, [isOpen]);
 
@@ -390,6 +393,40 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
                         </motion.div>
                       )}
 
+                      <div className="flex justify-between pt-4">
+                        <button
+                          type="button"
+                          onClick={() => setStep(0)}
+                          className="font-sans text-sm uppercase tracking-[0.15em] text-muted transition-colors hover:text-text"
+                        >
+                          Back
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setStep(2)}
+                          className="inline-flex items-center gap-2 bg-text px-8 py-3.5 font-sans text-sm uppercase tracking-[0.15em] text-white transition-colors hover:bg-muted"
+                        >
+                          Next
+                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Step 3: Final Details */}
+                  {step === 2 && (
+                    <form onSubmit={handleSubmit} className="space-y-10">
+                      <div>
+                        <h3 className="font-heading text-2xl font-medium text-text">
+                          A few more details
+                        </h3>
+                        <p className="mt-2 font-sans text-sm text-muted">
+                          Help us understand what you're looking for.
+                        </p>
+                      </div>
+
                       {/* Dates + Travellers */}
                       <div className="grid gap-8 sm:grid-cols-2">
                         <PremiumInput
@@ -425,40 +462,6 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
                             </button>
                           </div>
                         </div>
-                      </div>
-
-                      <div className="flex justify-between pt-4">
-                        <button
-                          type="button"
-                          onClick={() => setStep(0)}
-                          className="font-sans text-sm uppercase tracking-[0.15em] text-muted transition-colors hover:text-text"
-                        >
-                          Back
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setStep(2)}
-                          className="inline-flex items-center gap-2 bg-text px-8 py-3.5 font-sans text-sm uppercase tracking-[0.15em] text-white transition-colors hover:bg-muted"
-                        >
-                          Next
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Step 3: Final Details */}
-                  {step === 2 && (
-                    <form onSubmit={handleSubmit} className="space-y-10">
-                      <div>
-                        <h3 className="font-heading text-2xl font-medium text-text">
-                          A few more details
-                        </h3>
-                        <p className="mt-2 font-sans text-sm text-muted">
-                          Help us understand what you're looking for.
-                        </p>
                       </div>
 
                       {/* Travel Style */}

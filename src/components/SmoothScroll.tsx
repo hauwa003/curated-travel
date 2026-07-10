@@ -3,6 +3,11 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
+declare global {
+  // eslint-disable-next-line no-var
+  var lenis: Lenis | undefined;
+}
+
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -10,6 +15,8 @@ export default function SmoothScroll() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 2,
     });
+
+    globalThis.lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
@@ -20,6 +27,7 @@ export default function SmoothScroll() {
 
     return () => {
       lenis.destroy();
+      globalThis.lenis = undefined;
     };
   }, []);
 
