@@ -91,14 +91,8 @@ const budgetRanges = [
   "Flexible",
 ];
 
-const stepImages = [
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80",
-  null, // will show selected destination or fallback
-  "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
-];
-
-const fallbackStepImage =
-  "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80";
+const heroImage =
+  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80";
 
 /* ─── Modal Content ─── */
 function ContactModalContent({ onClose }: { onClose: () => void }) {
@@ -122,17 +116,6 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
     setSelectedStyles((prev) =>
       prev.includes(style) ? prev.filter((s) => s !== style) : [...prev, style]
     );
-
-  // Dynamic image
-  const lastDest = selectedDestinations.filter((d) => d !== "Other").slice(-1)[0];
-  const destData = lastDest
-    ? destinations.find((d) => d.name === lastDest)
-    : null;
-
-  const currentImage =
-    step === 1 && destData
-      ? destData.image
-      : stepImages[step] || fallbackStepImage;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -183,44 +166,14 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
 
         {/* Hero image */}
         <div className="relative h-48 shrink-0 overflow-hidden md:h-56">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentImage}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: easeSmooth }}
-              className="absolute inset-0"
-            >
-              <Image
-                src={currentImage}
-                alt="Travel destination"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 672px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-dark/20 via-transparent to-dark/40" />
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Caption when destination is selected */}
-          <AnimatePresence>
-            {step === 1 && destData && (
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="absolute bottom-4 left-6"
-              >
-                <p className="font-heading text-lg font-medium text-white">
-                  {destData.name}
-                </p>
-                <p className="font-sans text-xs text-white/70">
-                  {destData.tagline}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <Image
+            src={heroImage}
+            alt="Luxury travel"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 672px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark/20 via-transparent to-dark/40" />
         </div>
 
         {/* Scrollable content */}
