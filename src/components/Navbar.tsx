@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { easeSmooth } from "@/lib/animations";
-import { useContactModal } from "@/components/ContactModal";
 
 const navLinks = [
   { href: "/about", label: "About", image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=400&q=80" },
@@ -15,8 +14,6 @@ const navLinks = [
   { href: "/reviews", label: "Reviews", image: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&q=80" },
 ];
 
-const contactLink = { label: "Contact", image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&q=80" };
-
 interface NavbarProps {
   transparent?: boolean;
 }
@@ -24,8 +21,6 @@ interface NavbarProps {
 export default function Navbar({ transparent = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { open: openContact } = useContactModal();
-
   const isLight = mobileOpen || (transparent && !scrolled);
 
   useEffect(() => {
@@ -76,16 +71,6 @@ export default function Navbar({ transparent = false }: NavbarProps) {
                 />
               </Link>
             ))}
-            <button
-              onClick={openContact}
-              className={`group relative font-sans text-sm uppercase tracking-[0.12em] transition-colors duration-300 ${isLight ? "text-white/90 hover:text-white" : "text-text hover:text-muted"}`}
-            >
-              Contact
-              <span
-                className={`absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 transition-[width] duration-200 group-hover:w-full ${isLight ? "bg-white" : "bg-text"}`}
-                style={{ transformOrigin: "center" }}
-              />
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -148,30 +133,6 @@ export default function Navbar({ transparent = false }: NavbarProps) {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0, x: -20, filter: "blur(6px)" }}
-                animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, x: -10, transition: { duration: 0.15 } }}
-                transition={{ delay: navLinks.length * 0.05 + 0.1, duration: 0.4, ease: easeSmooth }}
-              >
-                <button
-                  onClick={() => { setMobileOpen(false); openContact(); }}
-                  className="group flex items-center gap-4 py-3"
-                >
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-sm">
-                    <Image
-                      src={contactLink.image}
-                      alt="Contact"
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      sizes="48px"
-                    />
-                  </div>
-                  <span className="font-heading text-2xl font-medium text-white transition-colors group-hover:text-white/70">
-                    Contact
-                  </span>
-                </button>
-              </motion.div>
             </nav>
           </motion.div>
         )}

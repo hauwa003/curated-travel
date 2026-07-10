@@ -88,12 +88,12 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.1, ease: easeExpo }}
           className="mt-10 flex w-full max-w-xl flex-col gap-4 px-6 sm:w-auto sm:max-w-none sm:flex-row sm:px-0"
         >
-          <Button href="/destinations" variant="primary" className="w-full sm:w-auto">
-            Explore Destinations
-          </Button>
-          <ContactButton variant="secondary" className="w-full border-white/60 text-white hover:border-white hover:bg-white/20 hover:text-white sm:w-auto">
+          <ContactButton variant="primary" className="w-full sm:w-auto">
             Begin Your Journey
           </ContactButton>
+          <Button href="/destinations" variant="secondary" className="w-full border-white/60 text-white hover:border-white hover:bg-white/20 hover:text-white sm:w-auto">
+            Explore Destinations
+          </Button>
         </motion.div>
       </div>
 
