@@ -12,6 +12,7 @@ interface SubPageHeroProps {
   title: string;
   subtitle?: string;
   height?: string;
+  video?: string;
   children?: React.ReactNode;
 }
 
@@ -22,24 +23,38 @@ export default function SubPageHero({
   title,
   subtitle,
   height = "h-[60vh] min-h-[400px]",
+  video,
   children,
 }: SubPageHeroProps) {
   return (
     <section className={`relative ${height} w-full overflow-hidden`}>
-      {/* Image with scale settle */}
+      {/* Background media with scale settle */}
       <motion.div
         initial={{ scale: 1.05 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.4, ease: easeExpo }}
         className="absolute inset-0"
       >
-        <Image
-          src={image}
-          alt={alt}
-          fill
-          className="object-cover"
-          priority
-        />
+        {video ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={image}
+            className="h-full w-full object-cover"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src={image}
+            alt={alt}
+            fill
+            className="object-cover"
+            priority
+          />
+        )}
       </motion.div>
 
       {/* Overlay  - fades in with delay */}

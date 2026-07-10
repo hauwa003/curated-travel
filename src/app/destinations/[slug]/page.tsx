@@ -51,6 +51,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
           alt={dest.name}
           label={dest.region}
           title={dest.name}
+          video={dest.video}
         />
 
         {/* Tagline */}
