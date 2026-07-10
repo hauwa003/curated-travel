@@ -5,9 +5,8 @@ import PageWrapper from "@/components/PageWrapper";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import ImageReveal from "@/components/ImageReveal";
-import PremiumInput from "@/components/PremiumInput";
-import Button from "@/components/Button";
 import SubPageHero from "@/components/SubPageHero";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -54,40 +53,7 @@ export default function ContactPage() {
                     Share your travel aspirations and we&apos;ll be in touch within 24 hours to begin crafting your bespoke experience.
                   </p>
 
-                  <form className="mt-10 space-y-8">
-                    <div className="grid gap-8 sm:grid-cols-2">
-                      <PremiumInput label="First Name" name="firstName" />
-                      <PremiumInput label="Last Name" name="lastName" />
-                    </div>
-                    <PremiumInput label="Email Address" type="email" name="email" />
-                    <PremiumInput
-                      label="Destination Interest"
-                      name="destination"
-                      placeholder="e.g., Italian Riviera, Japan, Maldives"
-                    />
-                    <div className="grid gap-8 sm:grid-cols-2">
-                      <PremiumInput
-                        label="Approximate Dates"
-                        name="dates"
-                        placeholder="e.g., September 2026"
-                      />
-                      <PremiumInput
-                        label="Number of Travellers"
-                        name="travellers"
-                        placeholder="e.g., 2 adults"
-                      />
-                    </div>
-                    <PremiumInput
-                      label="Tell Us More"
-                      name="message"
-                      textarea
-                      rows={4}
-                      placeholder="What does your ideal journey look like?"
-                    />
-                    <Button type="submit">
-                      Send Enquiry
-                    </Button>
-                  </form>
+                  <ContactForm />
                 </div>
               </ScrollReveal>
             </div>
