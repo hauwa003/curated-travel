@@ -5,6 +5,7 @@ import PageWrapper from "@/components/PageWrapper";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import Button from "@/components/Button";
+import ContactButton from "@/components/ContactButton";
 import Divider from "@/components/Divider";
 import ImageReveal from "@/components/ImageReveal";
 import SubPageHero from "@/components/SubPageHero";
@@ -127,7 +128,7 @@ export default function ServicesPage() {
 
             <ScrollReveal delay={0.4}>
               <div className="mt-16 text-center">
-                <Button href="/contact">Begin Planning</Button>
+                <ContactButton>Begin Planning</ContactButton>
               </div>
             </ScrollReveal>
           </div>

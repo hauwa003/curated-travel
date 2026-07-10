@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ParallaxImage from "@/components/ParallaxImage";
 import ScrollReveal from "@/components/ScrollReveal";
-import Button from "@/components/Button";
+import ContactButton from "@/components/ContactButton";
 import { easeSmooth } from "@/lib/animations";
 
 export default function CtaSection() {
@@ -57,9 +57,9 @@ export default function CtaSection() {
             journey that exceeds it.
           </p>
           <div className="mt-10">
-            <Button href="/contact">
+            <ContactButton>
               Start the Conversation
-            </Button>
+            </ContactButton>
           </div>
         </ScrollReveal>
       </div>

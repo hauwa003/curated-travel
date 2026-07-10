@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
+import ContactButton from "@/components/ContactButton";
 import { easeExpo, easeSmooth } from "@/lib/animations";
 
 const taglineChars = "Journeys, Crafted".split("");
@@ -90,9 +91,9 @@ export default function Hero() {
           <Button href="/destinations" variant="primary" className="w-full sm:w-auto">
             Explore Destinations
           </Button>
-          <Button href="/contact" variant="secondary" className="w-full border-white/60 text-white hover:border-white hover:bg-white/20 hover:text-white sm:w-auto">
+          <ContactButton variant="secondary" className="w-full border-white/60 text-white hover:border-white hover:bg-white/20 hover:text-white sm:w-auto">
             Begin Your Journey
-          </Button>
+          </ContactButton>
         </motion.div>
       </div>
 

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import ReviewsGrid from "@/components/sections/ReviewsGrid";
 import ScrollReveal from "@/components/ScrollReveal";
-import Button from "@/components/Button";
+import ContactButton from "@/components/ContactButton";
 import SubPageHero from "@/components/SubPageHero";
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function ReviewsPage() {
                 Let us craft a journey that you&apos;ll be sharing for years to come.
               </p>
               <div className="mt-8">
-                <Button href="/contact">Start Planning</Button>
+                <ContactButton>Start Planning</ContactButton>
               </div>
             </ScrollReveal>
           </div>
