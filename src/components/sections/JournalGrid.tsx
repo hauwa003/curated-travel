@@ -68,15 +68,15 @@ export default function JournalGrid() {
           </div>
 
           {/* Category filters */}
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-3">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 font-sans text-xs uppercase tracking-[0.12em] transition-colors duration-200 ${
+                className={`px-5 py-2 font-sans text-xs uppercase tracking-[0.15em] transition-[color,background-color,border-color] duration-200 ${
                   activeCategory === cat
                     ? "bg-text text-white"
-                    : "bg-surface text-muted hover:bg-text/10"
+                    : "border border-text/20 text-muted hover:border-text hover:text-text"
                 }`}
               >
                 {cat}
