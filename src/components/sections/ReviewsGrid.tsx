@@ -10,7 +10,7 @@ import { fadeUp, stagger } from "@/lib/animations";
 export default function ReviewsGrid() {
   return (
     <section className="py-24 md:py-32 lg:py-40">
-      <div className="mx-auto max-w-6xl px-6 lg:px-12">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div
           initial="hidden"
           whileInView="visible"
