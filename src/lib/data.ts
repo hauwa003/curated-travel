@@ -230,19 +230,22 @@ export const teamMembers: TeamMember[] = [
     name: "Isabella Montague",
     role: "Founder & Lead Advisor",
     bio: "With over two decades in luxury travel, Isabella founded Vela & Co. on a simple belief: that travel, at its best, is a transformative art. A former travel editor and Virtuoso advisor, she brings an editorial eye and an unrivalled network to every journey she crafts.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+    image: "/team/isabella.png",
+    linkedin: "https://www.linkedin.com/in/isabella-montague",
   },
   {
     name: "James Beaumont",
     role: "Senior Travel Advisor",
     bio: "James specialises in adventure and expedition travel, from Antarctic cruises to Saharan desert camps. His background in documentary filmmaking gives him an eye for the cinematic — every itinerary he designs reads like a story worth telling.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    image: "/team/james.png",
+    linkedin: "https://www.linkedin.com/in/james-beaumont",
   },
   {
     name: "Sophie Laurent",
     role: "European Specialist",
     bio: "Born in Lyon and educated in Florence, Sophie brings an insider's knowledge of Europe that no guidebook can match. From hidden bistros in Paris to private palazzo tours in Venice, her connections open doors that most travellers never know exist.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
+    image: "/team/sophie.png",
+    linkedin: "https://www.linkedin.com/in/sophie-laurent",
   },
 ];
 
