@@ -9,6 +9,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import Divider from "@/components/Divider";
 import Button from "@/components/Button";
+import ContactButton from "@/components/ContactButton";
 import SubPageHero from "@/components/SubPageHero";
 import { destinations } from "@/lib/data";
 
@@ -100,7 +101,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
                     </div>
                   </div>
                   <div className="mt-10">
-                    <Button href="/contact">Book Your Trip</Button>
+                    <ContactButton>Book Your Trip</ContactButton>
                   </div>
                 </div>
               </ScrollReveal>
@@ -215,7 +216,7 @@ export default async function DestinationDetailPage({ params }: PageProps) {
                 itinerary that exceeds your expectations.
               </p>
               <div className="mt-10">
-                <Button href="/contact">Book Your Trip</Button>
+                <ContactButton>Book Your Trip</ContactButton>
               </div>
             </ScrollReveal>
           </div>

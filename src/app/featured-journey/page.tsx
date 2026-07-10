@@ -5,6 +5,7 @@ import PageWrapper from "@/components/PageWrapper";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import Button from "@/components/Button";
+import ContactButton from "@/components/ContactButton";
 import ImageReveal from "@/components/ImageReveal";
 import SubPageHero from "@/components/SubPageHero";
 import TimelineProgress from "./TimelineProgress";
@@ -57,7 +58,7 @@ export default function FeaturedJourneyPage() {
                   {journey.description}
                 </p>
                 <div className="mt-8">
-                  <Button href="/contact">Enquire About This Journey</Button>
+                  <ContactButton>Enquire About This Journey</ContactButton>
                 </div>
               </ScrollReveal>
 
@@ -132,7 +133,7 @@ export default function FeaturedJourneyPage() {
                 Every Vela & Co. journey is tailored to you. Let us know what speaks to you, and we&apos;ll craft something extraordinary.
               </p>
               <div className="mt-8">
-                <Button href="/contact">Begin Planning</Button>
+                <ContactButton>Begin Planning</ContactButton>
               </div>
             </ScrollReveal>
           </div>

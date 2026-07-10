@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import ScrollProgress from "@/components/ScrollProgress";
 import SmoothScroll from "@/components/SmoothScroll";
+import { ContactModalProvider } from "@/components/ContactModal";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -44,7 +45,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-bg text-text font-sans">
         <SmoothScroll />
         <ScrollProgress />
-        {children}
+        <ContactModalProvider>
+          {children}
+        </ContactModalProvider>
       </body>
     </html>
   );
