@@ -153,7 +153,7 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 overscroll-contain"
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-dark/60 backdrop-blur-sm" onClick={onClose} />
@@ -220,7 +220,7 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto overscroll-contain">
           <div className="px-6 py-8 md:px-10 md:py-10">
             <AnimatePresence mode="wait">
               {!submitted ? (
