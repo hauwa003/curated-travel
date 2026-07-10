@@ -400,6 +400,17 @@ export const journalPosts: JournalPost[] = [
     readTime: "8 min read",
     author: "James Beaumont",
   },
+  {
+    slug: "desert-luxury-rewritten",
+    title: "Desert Luxury, Rewritten",
+    excerpt: "From the dunes of Oman to the canyons of Utah — how the world's great deserts are redefining remote luxury.",
+    content: `The desert has always demanded a particular kind of traveller — someone willing to trade the comfort of green for the honesty of sand, the noise of civilisation for a silence so vast it has a sound of its own.\n\nWhat has changed in recent years is not the desert itself but what awaits you within it. The finest desert properties now offer an experience that would have seemed impossible a generation ago: absolute luxury in absolute remoteness.\n\nAmangiri, carved into the Utah canyons near Lake Powell, is perhaps the most celebrated example. Its concrete pavilions echo the geometry of the surrounding mesas, and the swimming pool — cut directly into the rock formation — is one of the most photographed in the world. But what makes Amangiri extraordinary is not its architecture; it's the silence that greets you when you step outside.\n\nIn Oman, the Sharqiya Sands offer a different desert vocabulary. Here, luxury means a tented camp that appears and disappears with the seasons, Bedouin guides who navigate by the stars, and a dinner table set on a dune ridge as the sun turns the sand from gold to copper to violet.\n\nThe desert teaches a lesson that few other landscapes can: that emptiness is not absence. It is space — for thought, for wonder, for the kind of deep rest that our overstimulated lives rarely permit.`,
+    image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80",
+    category: "Destinations",
+    date: "2025-11-02",
+    readTime: "6 min read",
+    author: "Sophie Laurent",
+  },
 ];
 
 export const teamMembers: TeamMember[] = [

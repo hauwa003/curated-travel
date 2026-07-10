@@ -85,7 +85,7 @@ export default function JournalGrid() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`rounded-full px-4 py-1.5 font-sans text-xs uppercase tracking-[0.12em] transition-colors duration-200 ${
+                  className={`px-4 py-1.5 font-sans text-xs uppercase tracking-[0.12em] transition-colors duration-200 ${
                     activeCategory === cat
                       ? "bg-text text-white"
                       : "bg-surface text-muted hover:bg-text/10"
@@ -100,7 +100,7 @@ export default function JournalGrid() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortOption)}
-              className="border border-text/20 bg-transparent px-3 py-1.5 font-sans text-xs uppercase tracking-[0.12em] text-muted transition-colors duration-200 focus:border-text/40 focus:outline-none"
+              className="border border-text/20 bg-transparent px-4 py-2 font-sans text-xs uppercase tracking-[0.12em] text-muted transition-colors duration-200 focus:border-text/40 focus:outline-none"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
