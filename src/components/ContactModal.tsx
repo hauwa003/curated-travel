@@ -156,7 +156,8 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 overscroll-contain"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+      data-lenis-prevent
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-dark/60 backdrop-blur-sm" onClick={onClose} />
@@ -223,7 +224,7 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain">
+        <div className="flex-1 overflow-y-auto overscroll-contain" data-lenis-prevent>
           <div className="px-6 py-8 md:px-10 md:py-10">
             <AnimatePresence mode="wait">
               {!submitted ? (
@@ -364,34 +365,7 @@ function ContactModalContent({ onClose }: { onClose: () => void }) {
                             </div>
                           </button>
                         ))}
-                        <button
-                          type="button"
-                          onClick={() => toggleDestination("Other")}
-                          className={`flex aspect-[3/2] items-center justify-center transition-all duration-200 ${
-                            selectedDestinations.includes("Other")
-                              ? "bg-text text-white ring-2 ring-text"
-                              : "bg-surface text-muted ring-1 ring-text/10 hover:ring-text/30"
-                          }`}
-                        >
-                          <span className="font-sans text-[10px] uppercase tracking-[0.1em] sm:text-xs sm:tracking-[0.15em]">
-                            Other
-                          </span>
-                        </button>
                       </div>
-
-                      {selectedDestinations.includes("Other") && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          className="overflow-hidden"
-                        >
-                          <PremiumInput
-                            label="Tell us where"
-                            name="otherDestination"
-                            placeholder="e.g., Bali, South Africa, Peru"
-                          />
-                        </motion.div>
-                      )}
 
                       <div className="flex justify-between pt-4">
                         <button
